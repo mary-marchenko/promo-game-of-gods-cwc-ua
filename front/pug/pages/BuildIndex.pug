@@ -1,0 +1,224 @@
+.fav-page.loading
+    .spinner-overlay
+        .spinner
+    .promo
+        .promo__left
+            .promo__left-title(data-translate="promoTitle") #[span Гра] #[span Богів]
+            .promo__left-cont
+                .promo__left-top(data-translate="promoFond") призовий фонд
+                .promo__left-center(data-translate="promoPrize") #[span 1 000 000] #[span *] #[span ₴]
+            .promo__left-bottom(data-translate="promoInfo") З 15 червня по 13 липня 2025 року роби ставки від 200₴ на футбольні події в рамках «Клубний чемпіонат світу з футболу 2025» та заробляй за кожні розраховані 200₴ у розділі «Спорт» по 1 ігровому балу, а у розділі #[span «LIVE» — по 3 ігрові бали.]
+            a(href="/login/" role="button").promo__left-btn.btn.unauth-msg
+                span.btn-txt(data-translate="signBtn") Авторизуйся
+            a(href="#" role="button").promo__left-btn.btn.part-btn.hide
+                span.btn-txt(data-translate="partBtn") Взяти участь
+            .btnCont.hide
+                a(href="#" role="button").btn.btn-s.btn-match
+                    span.btn-txt(data-translate="preBtn") Пре-матч
+                a(href="#" role="button").btn.btn-s.btn-live
+                    .btn-txt
+                        span.btn-txt-text(data-translate="liveBtn") live #[span]
+                        span.btn-txt-icon
+            a(href="#" role="button").promo__left-btn.btn.play-btn.hide
+                span.btn-txt(data-translate="playBtn") Робити ставку
+        .promo__right
+            .promo__right-heroes
+                picture
+                    source(media="(max-width: 600px)" srcset="img/promo/heroes-mob.png")
+                    source(media="(max-width: 1050px)" srcset="img/promo/heroes-tab.png")
+                    img(src="img/promo/heroes-desk.png" alt="heroes")
+            .promo__right-cup
+                picture
+                    source(media="(max-width: 600px)" srcset="img/promo/cup-mob.png")
+                    source(media="(max-width: 1050px)" srcset="img/promo/cup-tab.png")
+                    img(src="img/promo/cup-desk.png" alt="heroes")
+    .gide
+        .gide__wrap
+            .gide__title(data-translate="gideTitle") Як взяти участь?
+            .gide__list
+                .gide__list-item
+                    span.gide__list-item-number 1
+                    .gide__list-item-txt(data-translate="gideItem1") Натисни кнопку «Взяти участь»
+                .gide__list-item
+                    span.gide__list-item-number 2
+                    .gide__list-item-txt(data-translate="gideItem2") Роби виграшні ставки
+                .gide__list-item
+                    span.gide__list-item-number 3
+                    .gide__list-item-txt(data-translate="gideItem3") Отримуй бали та нагороду
+            .gide__pers
+                .gide__genie
+                    picture
+                        source(media="(max-width: 600px)" srcset="img/gide/genie-mob.png")
+                        source(media="(max-width: 1050px)" srcset="img/gide/genie-tab.png")
+                        img(src="img/gide/genie-desk.png" alt="genie")
+                .gide__shaman
+                    picture
+                        source(media="(max-width: 600px)" srcset="img/gide/shaman-mob.png")
+                        source(media="(max-width: 1050px)" srcset="img/gide/shaman-tab.png")
+                        img(src="img/gide/shaman-desk.png" alt="man")
+                .gide__zeus
+                    picture
+                        source(media="(max-width: 750px)" srcset="img/table/zeus-mob.png")
+                        img(src="img/table/zeus-mob.png" alt="man")
+    .drop
+        details.dropdown
+            summary(data-translate="gideDropTitle") Деталі
+            .drop-txt
+                .drop-txt-list(data-translate="gideTxt")
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+    .table
+        .table__title Результати
+        .table__wrap
+            .table__pers
+                .table__pers-cup
+                    picture
+                        source(media="(max-width: 600px)" srcset="img/table/cup-mob.png")
+                        source(media="(max-width: 1050px)" srcset="img/table/cup-tab.png")
+                        img(src="img/table/cup-desk.png" alt="cup")
+                .table__pers-zeus
+                    picture
+                        source(media="(max-width: 600px)" srcset="img/table/zeus-mob.png")
+                        source(media="(max-width: 1050px)" srcset="img/table/zeus-tab.png")
+                        img(src="img/table/zeus-desk.png" alt="zeus")
+            .table__center
+                .table__tabs
+                    .table__tabs-item.active(data-week="1")
+                        .table__tabs-item-stage #[span(data-translate="tableTab") Етап] 1
+                        .table__tabs-item-dates(data-translate="tableDate1") 15.06. - 23.06.
+                    .table__tabs-item(data-week="2")
+                        .table__tabs-item-stage #[span(data-translate="tableTab") Етап] 2
+                        .table__tabs-item-dates(data-translate="tableDate2") 23.06. - 29.06.
+                    .table__tabs-item(data-week="3")
+                        .table__tabs-item-stage #[span(data-translate="tableTab") Етап] 3
+                        .table__tabs-item-dates(data-translate="tableDate3") 30.06. - 07.07.
+                    .table__tabs-item(data-week="4")
+                        .table__tabs-item-stage #[span(data-translate="tableTab") Етап] 4
+                        .table__tabs-item-dates(data-translate="tableDate4") 08.07. - 13.07.
+                .table__head
+                    .table__row
+                        .table__row-item
+                        .table__row-item(data-translate="tableId") ID гравця
+                        .table__row-item(data-translate="tablePoints") Кількість балів
+                        .table__row-item(data-translate="tablePrize") Приз
+                .table__body#table
+                    .table__row.place1
+                        .table__row-item 1
+                        .table__row-item ********
+                        .table__row-item ********
+                        .table__row-item 15 000 ₴
+                    .table__row.place2
+                        .table__row-item 2
+                        .table__row-item ********
+                        .table__row-item ********
+                        .table__row-item 10 000 ₴
+                    .table__row.place3
+                        .table__row-item 3
+                        .table__row-item ********
+                        .table__row-item ********
+                        .table__row-item 15 000 ₴
+                    .table__row
+                        .table__row-item 4
+                        .table__row-item ********
+                        .table__row-item ********
+                        .table__row-item 10 000 ₴
+                    .table__row
+                        .table__row-item 5
+                        .table__row-item ********
+                        .table__row-item ********
+                        .table__row-item 15 000 ₴
+                    .table__row
+                        .table__row-item 6
+                        .table__row-item ********
+                        .table__row-item ********
+                        .table__row-item 10 000 ₴
+                    .table__row
+                        .table__row-item 7
+                        .table__row-item ********
+                        .table__row-item 65656566
+                        .table__row-item 15 000 ₴
+                    .table__row
+                        .table__row-item 8
+                        .table__row-item ********
+                        .table__row-item 767
+                        .table__row-item 10 000 ₴
+                    .table__row
+                        .table__row-item 9
+                        .table__row-item ********
+                        .table__row-item 76
+                        .table__row-item 15 000 ₴
+                    .table__row
+                        .table__row-item 10
+                        .table__row-item ********
+                        .table__row-item 98
+                        .table__row-item 10 000 ₴
+                .table__body#tableOther
+                    .table__row
+                        .table__row-item 22
+                        .table__row-item 4538***
+                        .table__row-item 32.9
+                        .table__row-item 10 000 ₴
+                    .table__row.you
+                        .table__row-item 23 #[span.you(data-translate="you") Ти]
+                        .table__row-item 4538***
+                        .table__row-item 32.9
+                        .table__row-item 15 000 ₴
+                    .table__row
+                        .table__row-item 24
+                        .table__row-item 4538***
+                        .table__row-item 32.9
+                        .table__row-item 10 000 ₴
+        a(href="/login/" role="button").promo__left-btn.btn.unauth-msg
+            span.btn-txt(data-translate="signBtn") Авторизуйся
+        a(href="#" role="button").promo__left-btn.btn.part-btn.hide
+            span.btn-txt(data-translate="partBtn") Взяти участь
+        .btnCont.hide
+            a(href="#" role="button").btn.btn-s.btn-match
+                span.btn-txt(data-translate="preBtn") Пре-матч
+            a(href="#" role="button").btn.btn-s.btn-live
+                .btn-txt
+                    span.btn-txt-text(data-translate="liveBtn") live #[span]
+                    span.btn-txt-icon
+        a(href="#" role="button").promo__left-btn.btn.play-btn.hide
+            span.btn-txt(data-translate="playBtn") Робити ставку
+    .drop
+        details.dropdown
+            summary(data-translate="rulseBtn") Офіційні правила
+            .drop-txt
+                .drop-txt-list(data-translate="rules")
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+                    p Lorem ipsum
+        .drop__bottom-text(data-translate="dropBottomText") *Загальний призовий фонд акції «Гра Богів» складає 1 000 000 електронних грошових замінників. Деталі на сайті www.favbet.ua. Період дії акції – з 15.06.2025 до 13.07.2025 року.
+    .preview
+        .preview__text(data-translate="previewText") А також продовжуй свою боротьбу в Акції «Божественна битва»
+        .preview__wrap
+            .preview__title(data-translate="previewTitle") #[span божественна] #[span битва]
+            .preview__cup
+                picture
+                    source(media="(max-width: 600px)" srcset="img/table/cup-mob.png")
+                    source(media="(max-width: 1050px)" srcset="img/table/cup-tab.png")
+                    img(src="img/table/cup-desk.png" alt="cup")
+            .preview__prize
+                .preview__prize-item(data-translate="previewPrizeTop") Вигравай
+                .preview__prize-item(data-translate="previewPrizeBottom") #[span до] #[span 70 000] #[span *] #[span ₴]
+            .preview__left
+                picture
+                    source(media="(max-width: 600px)" srcset="img/preview/zeus-preview-mob.png")
+                    source(media="(max-width: 1050px)" srcset="img/preview/zeus-preview-tab.png")
+                    img(src="img/preview/zeus-preview-desk.png" alt="zeus")
+            .preview__right
+                picture
+                    source(media="(max-width: 600px)" srcset="img/preview/genie-preview-mob.png")
+                    source(media="(max-width: 1050px)" srcset="img/preview/genie-preview-tab.png")
+                    img(src="img/preview/genie-preview-desk.png" alt="genie")
+            a(href="#" role="button").preview-btn.btn.part-btn
+                span.btn-txt(data-translate="partBtn") Взяти участь
