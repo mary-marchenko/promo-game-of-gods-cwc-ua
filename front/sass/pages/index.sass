@@ -753,6 +753,20 @@ body
   min-width: 826px
   margin-bottom: 50px
   position: relative
+  &-link
+    position: absolute
+    width: 100%
+    height: 100%
+    cursor: pointer
+    z-index: 10
+    transition: background-color .5s ease-in-out
+    &:hover
+      &:after
+        content: ""
+        background-color: #0101871A
+        position: absolute
+        width: 100%
+        height: 100%
   &__text
     color: $white
     font-family: $font-suisse-intl-reg

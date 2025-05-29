@@ -201,6 +201,7 @@
     .preview
         .preview__text(data-translate="previewText") А також продовжуй свою боротьбу в Акції «Божественна битва»
         .preview__wrap
+            a(href="#" role="button" target="_blank").preview-link
             .preview__title(data-translate="previewTitle") #[span божественна] #[span битва]
             .preview__cup
                 picture
@@ -220,5 +221,5 @@
                     source(media="(max-width: 600px)" srcset="img/preview/genie-preview-mob.png")
                     source(media="(max-width: 1050px)" srcset="img/preview/genie-preview-tab.png")
                     img(src="img/preview/genie-preview-desk.png" alt="genie")
-            a(href="#" role="button").preview-btn.btn.part-btn
+            .preview-btn.btn.part-btn
                 span.btn-txt(data-translate="partBtn") Взяти участь
