@@ -1,5 +1,33 @@
 @import "../var"
 
+//TEST
+
+//test
+.menu-btn
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 20
+  width: fit-content
+  background: white
+  padding: 3px
+
+.menu-test
+  position: fixed
+  left: 0
+  top: 25px
+  z-index: 20
+  display: flex
+  gap: 2px
+  flex-direction: column
+  & > button
+    width: fit-content
+    background: white
+    color: black
+    padding: 2px
+    font-family: inherit
+    border-radius: 2px
+
 .hide
   display: none !important
 
@@ -28,7 +56,7 @@ body
     content: ""
     display: block
     width: 95%
-    height: 90%
+    height: 85%
     border-radius: 10px
     position: absolute
     top: 49%
@@ -43,7 +71,7 @@ body
     padding: 8px 10px 12px 10px
     text-align: center
     color: $dark-blue
-    font-family: $font-spaceland
+    font-family: $font-spaceland-ten-obl
     font-size: 36px
     text-transform: uppercase
     mask-image: url("../img/btn.png")
@@ -82,7 +110,7 @@ body
         display: block
       &-text
         color: $dark-blue
-        font-family: $font-spaceland
+        font-family: $font-spaceland-ten-obl
         font-size: 36px
         margin-right: 7px
       &-icon
@@ -133,7 +161,7 @@ body
     align-items: center
     margin-right: -70px
     &-title
-      font-family: $font-spaceland
+      font-family: $font-spaceland-ten-obl
       font-size: 74px
       line-height: 76px
       text-shadow: 0px 0px 14.876px #FFE2C7
@@ -142,7 +170,7 @@ body
       align-items: center
       text-transform: uppercase
       span
-        font-family: $font-spaceland
+        font-family: $font-spaceland-ten-obl
         position: relative
         &:nth-child(1)
           display: flex
@@ -183,7 +211,7 @@ body
             background: url("../img/promo/lightening-right.svg") no-repeat 0 0/contain
     &-top
       margin-top: -20px
-      font-family: $font-spaceland
+      font-family: $font-spaceland-ten-obl
       font-size: 80px
       color: $magenta
       text-shadow: 0px 1.716px 0px #000
@@ -195,7 +223,7 @@ body
       margin-top: -40px
       span
         color: $magenta
-        font-family: $font-spaceland
+        font-family: $font-spaceland-ten-obl
         &:nth-child(1)
           font-size: 128px
         &:nth-child(2)
@@ -289,7 +317,7 @@ body
   &__title
     z-index: 2
     position: relative
-    font-family: $font-spaceland
+    font-family: $font-spaceland-ten-obl
     font-size: 68px
     color: $magenta
     text-shadow: 0px 1px 0px #000
@@ -306,7 +334,7 @@ body
       display: flex
       align-items: center
       &-number
-        font-family: $font-spaceland
+        font-family: $font-spaceland-ten-obl
         font-size: 102px
         text-shadow: 0px 0px 10px rgba(255, 226, 199, 0.60), 0px 1px 0px #000
         color: $white
@@ -513,7 +541,7 @@ body
   z-index: 1
   margin-bottom: 30px
   &__title
-    font-family: $font-spaceland
+    font-family: $font-spaceland-ten-obl
     font-size: 68px
     text-shadow: 0px 1px 0px #000
     text-transform: uppercase
@@ -617,18 +645,24 @@ body
     background: url('../img/table/bg-table-tabs.png') no-repeat 50% 0/cover
     margin-bottom: 7px
     display: flex
-    justify-content: space-around
+    justify-content: center
     padding: 3px 0
     &-item
-      width: 76px
+      padding: 0 10px
+      width: max-content
+      white-space: nowrap
       height: 52px
       display: flex
       flex-direction: column
       align-items: center
       transition: all .5s ease-in-out
       z-index: 10
+      &:nth-child(1)
+        width: 145px
+      &:nth-child(2)
+        width: 100px
       &-stage
-        font-family: $font-spaceland
+        font-family: $font-spaceland-ten
         font-size: 24px
         line-height: 37px
         color: $white
@@ -689,7 +723,7 @@ body
       .you
         color: $magenta
         background: url('../img/table/you-bg.png') no-repeat 50% 50%/cover
-        font-family: $font-spaceland
+        font-family: $font-spaceland-ten-obl
         font-size: 24px
         line-height: 23px
         min-width: 46px
@@ -704,7 +738,7 @@ body
       justify-content: center
       color: $white
       width: 50px
-      font-family: $font-spaceland
+      font-family: $font-spaceland-ten-obl
       font-size: 17px
       white-space: nowrap
       &:nth-child(1)
@@ -798,7 +832,7 @@ body
       left: 0
       background: linear-gradient(180deg, rgba(0, 0, 34, 0.00) 0%, rgba(0, 0, 34, 0.46) 36.97%, rgba(0, 0, 34, 0.70) 100%)
   &__title
-    font-family: $font-spaceland
+    font-family: $font-spaceland-ten-obl
     font-size: 38px
     line-height: 38px
     text-shadow: 0px 0px 7.754px #FFE2C7
@@ -807,7 +841,7 @@ body
     align-items: center
     text-transform: uppercase
     span
-      font-family: $font-spaceland
+      font-family: $font-spaceland-ten-obl
       position: relative
       &:nth-child(1)
         display: flex
@@ -878,7 +912,7 @@ body
     &-item
       display: flex
       align-items: flex-start
-      font-family: $font-spaceland
+      font-family: $font-spaceland-ten-obl
       color: $magenta
       gap: 4px
       text-shadow: 0px 0.68px 0px #000

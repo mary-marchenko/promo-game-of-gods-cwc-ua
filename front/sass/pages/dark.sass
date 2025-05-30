@@ -8,3 +8,58 @@ body.dark
       display: none
     picture.dark
       display: inline-block
+  .promo
+    background: url('../img/promo/bg-promo-desk-dark.jpg') no-repeat 50% 50%/cover
+    @media screen and (max-width: 1050px)
+      background: url("../img/promo/bg-promo-tab-dark.jpg") no-repeat 50% 50%/cover
+    @media screen and (max-width: 600px)
+      background: url("../img/promo/bg-promo-mob-dark.jpg") no-repeat 50% 50%/cover
+    &:after
+      background: linear-gradient(180deg, rgba(9, 11, 24, 0.00) 0%, rgba(9, 11, 24, 0.66) 36.97%, #090B18 100%)
+  .gide
+    &__wrap
+      background: url('../img/gide/bg-gide-desk-dark.jpg') no-repeat 50% 0/cover
+      background-size: 1036px 339px
+      @media screen and (max-width: 1050px)
+        background: url("../img/gide/bg-gide-tab-dark.jpg") no-repeat 50% 0/cover
+        background-size: 100% 309px
+      @media screen and (max-width: 750px)
+        background: url("../img/gide/bg-gide-mob-dark.png") no-repeat 50% 30%/cover
+      @media screen and (max-width: 600px)
+        background: url("../img/gide/bg-gide-mob-dark.png") no-repeat 50% 50%/cover
+        background-size: 600px 487px
+      &:before
+        background: linear-gradient(360deg, rgba(9, 11, 24, 0.00) 0%, rgba(9, 11, 24, 0.66) 36.97%, #090B18 100%)
+      &:after
+        background: linear-gradient(180deg, rgba(9, 11, 24, 0.00) 0%, rgba(9, 11, 24, 0.66) 36.97%, #090B18 100%)
+  .table
+    &__wrap
+      background: url('../img/table/bg-table-desk-dark.jpg') no-repeat 50% 0/cover
+      background-size: 1036px 476px
+      @media screen and (max-width: 1050px)
+        background: url("../img/table/bg-table-tab-dark.jpg") no-repeat 50% 0/cover
+        background-size: 100% 484px
+      @media screen and (max-width: 600px)
+        background: url("../img/table/bg-table-mob-dark.jpg") no-repeat 50% 0/cover
+      &:before
+        background: linear-gradient(360deg, rgba(9, 11, 24, 0.00) 0%, rgba(9, 11, 24, 0.66) 36.97%, #090B18 100%)
+      &:after
+        background: linear-gradient(180deg, rgba(9, 11, 24, 0.00) 0%, rgba(9, 11, 24, 0.66) 36.97%, #090B18 100%)
+    &__pers
+      &:after
+        background: linear-gradient(180deg, rgba(9, 11, 24, 0.00) 0%, rgba(9, 11, 24, 0.66) 36.97%, #090B18 100%)
+  .preview
+    &-link
+      &:hover
+        &:after
+          background-color: #090B184A
+    &__wrap
+      background: url('../img/preview/bg-preview-desk-dark.jpg') no-repeat 0 0/cover
+      background-size: 826px 300px
+      @media screen and (max-width: 1050px)
+        background: url("../img/preview/bg-preview-tab-dark.jpg") no-repeat 50% 50%/cover
+      @media screen and (max-width: 600px)
+        background: url("../img/preview/bg-preview-mob-dark.png") no-repeat 50% 50%/cover
+      &:after
+        background: linear-gradient(180deg, rgba(9, 11, 24, 0.00) 0%, rgba(9, 11, 24, 0.66) 36.97%, #090B18 100%)
+
