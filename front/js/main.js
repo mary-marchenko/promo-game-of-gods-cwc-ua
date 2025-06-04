@@ -18,6 +18,9 @@
     ];
 
 
+    let liveMatchInterval = setInterval(() => {
+        checkIsLiveMatch(currentDate);
+    }, 600 * 1000);
 
     let activePeriodByDate = getActiveWeek(currentDate, customPeriods);
     // const activePeriodByDate = getActiveWeek(currentDate, customPeriods);
@@ -272,7 +275,10 @@
                     showElements(redirectBtns);
                     existingUser = true;
                     checkIsLiveMatch(currentDate);
-                    setInterval(() => {
+                    if (liveMatchInterval) {
+                        clearInterval(liveMatchInterval);
+                    }
+                    liveMatchInterval = setInterval(() => {
                         checkIsLiveMatch(currentDate);
                     }, 600 * 1000);
                 } else {
@@ -437,6 +443,8 @@
         if (!userId) {
             return;
         }
+
+        console.log(userId)
         const params = { userid: userId };
         fetch(apiURL + '/user/', {
             headers: {
@@ -447,6 +455,7 @@
             body: JSON.stringify(params)
         }).then(res => res.json())
             .then(res => {
+                console.log(res);
                 loaderBtn = true
                 toggleClasses(participateBtns, "loader")
                 toggleTranslates(participateBtns, "loader")
