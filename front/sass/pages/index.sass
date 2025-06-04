@@ -44,127 +44,803 @@ body
   & > *
     font-family: inherit
 
-.btn
-  display: flex
-  width: fit-content
-  min-width: 280px
-  position: relative
-  background: transparent
-  border: none
-  z-index: 5
-  &::before
-    content: ""
-    display: block
-    width: 95%
-    height: 85%
-    border-radius: 10px
-    position: absolute
-    top: 49%
-    left: 50%
-    transform: translate(-50%, -50%)
-    box-shadow: 0px 0px 28px $green
-    transition: all .5s ease-in-out
-    z-index: 0
-  .btn-txt
-    width: 100%
-    display: block
-    padding: 8px 10px 12px 10px
-    text-align: center
-    color: $dark-blue
-    font-family: $font-spaceland-ten-obl
-    font-size: 36px
-    text-transform: uppercase
-    mask-image: url("../img/btn.png")
-    mask-size: 100% 100%
-    mask-repeat: no-repeat
-    background: $green
-    z-index: 1
-    transition: background-color .5s ease-in-out
-  &:hover
-    cursor: pointer
-    .btn-txt
-      background: $green-hover
-    &::before
-      box-shadow: 0px 0px 28px $green-hover
-  &-s
-    min-width: 145px
-  &.btn-match
-    .btn-txt
-      mask-image: url("../img/btn-s-white.png")
-      background: $white
-    &::before
-      width: 90%
-      box-shadow: 0px 0px 28px $white
-    &:hover
-      .btn-txt
-        background: $white-hover
-      &::before
-        box-shadow: 0px 0px 28px $white-hover
-  &.btn-live
-    display: flex
-    .btn-txt
-      display: flex
-      justify-content: center
-      align-items: baseline
-      span
-        display: block
-      &-text
-        color: $dark-blue
-        font-family: $font-spaceland-ten-obl
-        font-size: 36px
-        margin-right: 7px
-      &-icon
-        width: 24px
-        height: 27px
-        background: url('../img/icon-fire.svg') no-repeat 100% 100%/cover
-.btnCont
-  width: 314px
-  display: flex
-  justify-content: space-between
-
 .fav-page
   background: $dark-blue
   display: flex
   flex-direction: column
   align-items: center
   overflow: hidden
-
-.promo
-  position: relative
-  width: 100%
-  max-width: 1366px
-  min-width: 1366px
-  max-height: 567px
-  display: flex
-  justify-content: flex-end
-  padding: 25px 0 30px
-  margin-bottom: 20px
-  background: url('../img/promo/bg-promo-desk.jpg') no-repeat 50% 50%/cover
-  @media screen and (max-width: 1050px)
-    background: url("../img/promo/bg-promo-tab.jpg") no-repeat 50% 50%/cover
-  @media screen and (max-width: 600px)
-    background: url("../img/promo/bg-promo-mob.jpg") no-repeat 50% 50%/cover
-  &:after
-    content: ""
-    display: block
+  .btn
+    display: flex
+    width: fit-content
+    min-width: 280px
+    position: relative
+    background: transparent
+    border: none
+    z-index: 5
+    &::before
+      content: ""
+      display: block
+      width: 95%
+      height: 85%
+      border-radius: 10px
+      position: absolute
+      top: 49%
+      left: 50%
+      transform: translate(-50%, -50%)
+      box-shadow: 0px 0px 28px $green
+      transition: all .5s ease-in-out
+      z-index: 0
+    .btn-txt
+      width: 100%
+      display: block
+      padding: 8px 10px 12px 10px
+      text-align: center
+      color: $dark-blue
+      font-family: $font-spaceland-ten-obl
+      font-size: 36px
+      text-transform: uppercase
+      mask-image: url("../img/btn.png")
+      mask-size: 100% 100%
+      mask-repeat: no-repeat
+      background: $green
+      z-index: 1
+      transition: background-color .5s ease-in-out
+    &:hover
+      cursor: pointer
+      .btn-txt
+        background: $green-hover
+      &::before
+        box-shadow: 0px 0px 28px $green-hover
+    &-s
+      min-width: 145px
+    &.btn-match
+      .btn-txt
+        mask-image: url("../img/btn-s-white.png")
+        background: $white
+      &::before
+        width: 90%
+        box-shadow: 0px 0px 28px $white
+      &:hover
+        .btn-txt
+          background: $white-hover
+        &::before
+          box-shadow: 0px 0px 28px $white-hover
+    &.btn-live
+      display: flex
+      .btn-txt
+        display: flex
+        justify-content: center
+        align-items: baseline
+        span
+          display: block
+        &-text
+          color: $dark-blue
+          font-family: $font-spaceland-ten-obl
+          font-size: 36px
+          margin-right: 7px
+        &-icon
+          width: 24px
+          height: 27px
+          background: url('../img/icon-fire.svg') no-repeat 100% 100%/cover
+  .btnCont
+    width: 314px
+    display: flex
+    justify-content: space-between
+  .promo
+    position: relative
     width: 100%
-    height: 103px
-    position: absolute
-    left: 0
-    bottom: -2px
-    z-index: 2
-    background: linear-gradient(180deg, rgba(0, 0, 34, 0.00) 0%, rgba(0, 0, 34, 0.66) 36.97%, #002 100%)
-  &__left
+    max-width: 1366px
+    min-width: 1366px
+    max-height: 567px
+    display: flex
+    justify-content: flex-end
+    padding: 25px 0 30px
+    margin-bottom: 20px
+    background: url('../img/promo/bg-promo-desk.jpg') no-repeat 50% 50%/cover
+    @media screen and (max-width: 1050px)
+      background: url("../img/promo/bg-promo-tab.jpg") no-repeat 50% 50%/cover
+    @media screen and (max-width: 600px)
+      background: url("../img/promo/bg-promo-mob.jpg") no-repeat 50% 50%/cover
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      height: 103px
+      position: absolute
+      left: 0
+      bottom: -2px
+      z-index: 2
+      background: linear-gradient(180deg, rgba(0, 0, 34, 0.00) 0%, rgba(0, 0, 34, 0.66) 36.97%, #002 100%)
+    &__left
+      display: flex
+      flex-direction: column
+      width: 447px
+      align-items: center
+      margin-right: -70px
+      &-title
+        font-family: $font-spaceland-ten-obl
+        font-size: 74px
+        line-height: 76px
+        text-shadow: 0px 0px 14.876px #FFE2C7
+        color: $white
+        display: flex
+        align-items: center
+        text-transform: uppercase
+        span
+          font-family: $font-spaceland-ten-obl
+          position: relative
+          &:nth-child(1)
+            display: flex
+            align-items: center
+            &::before
+              animation: lightningFlash 5s infinite
+              content: ""
+              display: block
+              position: absolute
+              left: -58px
+              top: -5px
+              width: 97px
+              height: 116px
+              z-index: 1
+              background: url("../img/promo/lightening-left.svg") no-repeat 0 0/contain
+            &::after
+              //animation: lightningFlash 4s infinite
+              content: ''
+              display: block
+              min-width: 53px
+              max-width: 53px
+              height: 100px
+              margin: 0 -5px
+              background: url("../img/promo/bolt.svg") no-repeat 0 0/contain
+          &:nth-child(2)
+            display: flex
+            align-items: center
+            &::after
+              animation: lightningFlash 4s infinite
+              content: ""
+              display: block
+              position: absolute
+              right: -62px
+              top: -4px
+              width: 97px
+              height: 116px
+              z-index: 1
+              background: url("../img/promo/lightening-right.svg") no-repeat 0 0/contain
+      &-top
+        margin-top: -20px
+        font-family: $font-spaceland-ten-obl
+        font-size: 80px
+        color: $magenta
+        text-shadow: 0px 1.716px 0px #000
+        text-transform: uppercase
+        text-align: center
+      &-center
+        z-index: 3
+        display: flex
+        align-items: flex-start
+        margin-top: -40px
+        span
+          color: $magenta
+          font-family: $font-spaceland-ten-obl
+          &:nth-child(1)
+            font-size: 128px
+          &:nth-child(2)
+            font-size: 46px
+            margin-top: 25px
+            margin-left: 10px
+          &:nth-child(3)
+            font-size: 88px
+            margin-left: 10px
+            margin-top: 40px
+      &-bottom
+        margin-top: -10px
+        text-align: center
+        font-family: $font-suisse-intl-reg
+        font-size: 17px
+        line-height: 22px
+        color: $white
+        margin-bottom: 24px
+        span
+          font-family: $font-suisse-intl-reg
+          color: $magenta
+    &__right
+      position: relative
+      max-width: 618px
+      padding-top: 15px
+      margin-right: 100px
+      z-index: 1
+      &-heroes
+        position: relative
+        z-index: 4
+      &-cup
+        position: absolute
+        max-width: 211px
+        top: 4px
+        left: 189px
+        picture
+          z-index: 3
+          position: relative
+        &:before
+          animation: rotateLight 40s linear infinite, blink 3s ease-in-out infinite
+          content: ""
+          display: block
+          position: absolute
+          left: 52%
+          top: 87px
+          width: 460px
+          height: 384px
+          background: url("../img/promo/cup-light-desk.png") no-repeat 0 0/contain
+          @media screen and (max-width: 1050px)
+            background: url("../img/promo/cup-light-tab.png") no-repeat 50% 50%/cover
+          @media screen and (max-width: 600px)
+            background: url("../img/promo/cup-light-mob.png") no-repeat 50% 0%/cover
+          pointer-events: none
+  .gide
+    width: 1036px
+    position: relative
+    margin-bottom: -64px
+    &__wrap
+      position: relative
+      width: 100%
+      height: 339px
+      display: flex
+      flex-direction: column
+      align-items: center
+      background: url('../img/gide/bg-gide-desk.jpg') no-repeat 50% 0/cover
+      background-size: 1036px 339px
+      @media screen and (max-width: 1050px)
+        background: url("../img/gide/bg-gide-tab.jpg") no-repeat 50% 0/cover
+        background-size: 100% 309px
+      @media screen and (max-width: 750px)
+        background: url("../img/gide/bg-gide-mob.png") no-repeat 50% 30%/cover
+      @media screen and (max-width: 600px)
+        background: url("../img/gide/bg-gide-mob.png") no-repeat 50% 50%/cover
+        background-size: 600px 487px
+      &:before
+        content: ""
+        position: absolute
+        left: 0
+        top: -2px
+        width: 100%
+        height: 100px
+        background: linear-gradient(180deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
+      &:after
+        content: ""
+        position: absolute
+        left: 0
+        top: 262px
+        width: 100%
+        height: 90px
+        background: linear-gradient(0deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
+    &__title
+      z-index: 2
+      position: relative
+      font-family: $font-spaceland-ten-obl
+      font-size: 68px
+      color: $magenta
+      text-shadow: 0px 1px 0px #000
+      text-transform: uppercase
+      padding-top: 10px
+    &__list
+      position: relative
+      z-index: 2
+      width: 66%
+      display: flex
+      justify-content: space-between
+      margin-top: -20px
+      &-item
+        display: flex
+        align-items: center
+        &-number
+          font-family: $font-spaceland-ten-obl
+          font-size: 102px
+          text-shadow: 0px 0px 10px rgba(255, 226, 199, 0.60), 0px 1px 0px #000
+          color: $white
+        &-txt
+          margin-left: 18px
+          width: 160px
+          text-align: left
+          font-family: $font-suisse-intl-reg
+          font-size: 17px
+          color: $white
+        &:nth-child(1)
+          .gide__list-item-number
+            position: relative
+            &:before
+              animation: lightningFlash 4s infinite
+              z-index: 3
+              position: absolute
+              content: ""
+              width: 50px
+              height: 40px
+              left: -25px
+              top: 45px
+              background: url("../img/gide/light-1-l.svg") no-repeat 50% 50%/cover
+            &:after
+              animation: lightningFlash 5s infinite
+              z-index: 3
+              position: absolute
+              content: ""
+              width: 50px
+              height: 95px
+              right: -21px
+              top: 25px
+              background: url("../img/gide/light-1-r.svg") no-repeat 50% 50%/cover
+        &:nth-child(2)
+          .gide__list-item-number
+            position: relative
+            &:before
+              animation: lightningFlash 4.8s infinite
+              z-index: 3
+              position: absolute
+              content: ""
+              width: 50px
+              height: 40px
+              left: -33px
+              top: 73px
+              background: url("../img/gide/light-2-l.svg") no-repeat 50% 50%/cover
+            &:after
+              animation: lightningFlash 3.2s infinite
+              z-index: 3
+              position: absolute
+              content: ""
+              width: 50px
+              height: 40px
+              left: 17px
+              top: 17px
+              background: url("../img/gide/light-2-r.svg") no-repeat 50% 50%/cover
+        &:nth-child(3)
+          .gide__list-item-number
+            position: relative
+            &:before
+              animation: lightningFlash 4s infinite
+              z-index: 3
+              position: absolute
+              content: ""
+              width: 50px
+              height: 40px
+              left: -33px
+              top: 85px
+              background: url("../img/gide/light-3-l.svg") no-repeat 50% 50%/cover
+            &:after
+              animation: lightningFlash 5s infinite
+              z-index: 3
+              position: absolute
+              content: ""
+              width: 50px
+              height: 40px
+              left: 14px
+              top: 26px
+              background: url("../img/gide/light-3-r.png") no-repeat 50% 50%/cover
+
+        &:nth-child(2)
+          margin-left: 30px
+          //margin: 0 42px
+
+    &__pers
+      position: absolute
+      display: flex
+      width: 105%
+      justify-content: space-between
+      align-items: flex-start
+      margin-top: -40px
+    &__zeus
+      display: none
+    &__genie
+      opacity: 0
+      animation: enter-left 0.6s ease-out forwards, levitate 2s ease-in-out infinite
+      animation-delay: 0.1s, 0.6s
+      max-width: 183px
+      margin-top: 60px
+    &__shaman
+      animation: enter-right 0.6s ease-out forwards
+      max-width: 215px
+      position: relative
+      picture
+        position: relative
+        z-index: 3
+      &:before
+        animation: rotateRight 7s linear infinite
+        z-index: 2
+        content: ""
+        display: block
+        position: absolute
+        left: 23%
+        top: 69%
+        width: 130px
+        height: 130px
+        background: url("../img/gide/man-circle-desk.png") no-repeat 0 0/contain
+        @media screen and (max-width: 1050px)
+          background: url("../img/gide/man-circle-tab.png") no-repeat 50% 50%/cover
+        @media screen and (max-width: 600px)
+          background: url("../img/gide/man-circle-mob.png") no-repeat 50% 0%/cover
+        pointer-events: none
+  .drop
+    max-width: 540px
+    width: 100%
+    margin: 0 auto 10px
+    border-radius: 10px
+    position: relative
+    z-index: 5
+    &__bottom-text
+      color: rgba(255, 255, 255, 0.90)
+      font-size: 9px
+      line-height: 12px
+      font-family: $font-suisse-intl-reg
+      opacity: .9
+      text-align: center
+      margin: 15px 0 40px 0
+    .dropdown[open] summary::before
+      transform:  rotate(180deg)
+    summary
+      list-style: none
+      padding: 15px
+      font-family: $font-suisse-intl-reg
+      font-size: 16px
+      cursor: pointer
+      border: 2px solid $white
+      background: rgba(0, 0, 0, 0.30)
+      display: flex
+      align-items: center
+      justify-content: space-between
+      color: $white
+      @media screen and (max-width: 600px)
+        font-size: 14px
+        line-height: 22px
+      &::before
+        content: ""
+        display: block
+        min-width: 25px
+        height: 25px
+        background: url("../img/arrow.png") no-repeat 0 0/contain
+        order: 2
+    &-txt
+      padding: 15px
+      background: rgba(0, 0, 0, 0.30)
+      margin-top: 10px
+      max-height: 350px
+      overflow-y: auto
+      border: 2px solid $white
+      scrollbar-width: auto
+      &::-webkit-scrollbar-thumb
+        background: $green
+        width: 3px
+        border-radius: 3px
+      &::-webkit-scrollbar
+        background: $white
+        width: 3px
+      &-list
+        display: flex
+        flex-direction: column
+        gap: 15px
+        p, strong
+          font-size: 16px
+          line-height: 26px
+          font-family: $font-suisse-intl-reg
+          color: $white
+          @media screen and (max-width: 600px)
+            font-size: 14px
+            line-height: 22px
+        span
+          font-family: $font-suisse-intl-reg
+          display: block
+        tr,td
+          font-family: $font-suisse-intl-reg
+        td
+          padding-left: 5px
+
+  .table
     display: flex
     flex-direction: column
-    width: 447px
     align-items: center
-    margin-right: -70px
-    &-title
+    justify-content: flex-start
+    width: 1036px
+    min-height: 440px
+    z-index: 1
+    margin-bottom: 30px
+    &__title
       font-family: $font-spaceland-ten-obl
-      font-size: 74px
-      line-height: 76px
-      text-shadow: 0px 0px 14.876px #FFE2C7
+      font-size: 68px
+      text-shadow: 0px 1px 0px #000
+      text-transform: uppercase
+      color: $magenta
+      margin-bottom: -5px
+    &__wrap
+      position: relative
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 14px
+      background: url('../img/table/bg-table-desk.jpg') no-repeat 50% 0/cover
+      background-size: 1036px 476px
+      @media screen and (max-width: 1050px)
+        background: url("../img/table/bg-table-tab.jpg") no-repeat 50% 0/cover
+        background-size: 100% 484px
+      @media screen and (max-width: 600px)
+        background: url("../img/table/bg-table-mob.jpg") no-repeat 50% 0/cover
+      &:before
+        content: ""
+        position: absolute
+        left: 0
+        top: -2px
+        width: 100%
+        height: 100px
+        background: linear-gradient(180deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
+      &:after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 55px
+        width: 100%
+        height: 90px
+        background: linear-gradient(0deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
+    &__pers
+      position: absolute
+      width: 78%
+      bottom: 55px
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      &-cup
+        max-width: 140px
+        height: 194px
+        position: relative
+        picture
+          z-index: 2
+          position: relative
+        &::before
+          z-index: 3
+          content: ""
+          display: block
+          position: absolute
+          left: -64%
+          bottom: -16px
+          width: 306px
+          height: 64px
+          background: url("../img/table/stones-desk.png") no-repeat 0 0/contain
+          @media screen and (max-width: 1050px)
+            background: url("../img/table/stones-tab.png") no-repeat 50% 50%/cover
+          @media screen and (max-width: 600px)
+            background: url("../img/table/stones-mob.png") no-repeat 50% 0%/cover
+          pointer-events: none
+        &:after
+          animation: rotateLight 40s linear infinite, blink 3s ease-in-out infinite
+          z-index: 1
+          content: ""
+          display: block
+          position: absolute
+          left: 52%
+          top: 52px
+          width: 330px
+          height: 275px
+          background: url("../img/table/cup-light-desk.png") no-repeat 0 0/contain
+          @media screen and (max-width: 1050px)
+            background: url("../img/table/cup-light-tab.png") no-repeat 50% 50%/cover
+          @media screen and (max-width: 600px)
+            background: url("../img/table/cup-light-mob.png") no-repeat 50% 0%/cover
+          pointer-events: none
+      &-zeus
+        max-width: 217px
+        picture
+          position: relative
+          z-index: 3
+        &:after
+          z-index: 1
+          content: ""
+          display: block
+          position: absolute
+          left: 67%
+          top: 0
+          width: 130px
+          height: 130px
+          background: url("../img/anim-bolt.gif") no-repeat 0 0/contain
+    &__center
+      width: 340px
+      z-index: 4
+    &__tabs
+      width: 103%
+      background: url('../img/table/bg-table-tabs.png') no-repeat 50% 0/cover
+      margin-bottom: 7px
+      display: flex
+      justify-content: center
+      padding: 3px 0
+      &-item
+        padding: 0 10px
+        width: max-content
+        white-space: nowrap
+        height: 52px
+        display: flex
+        flex-direction: column
+        align-items: center
+        transition: all .5s ease-in-out
+        z-index: 10
+        &:nth-child(1)
+          width: 145px
+        &:nth-child(2)
+          width: 100px
+        &-stage
+          font-family: $font-spaceland-ten
+          font-size: 24px
+          line-height: 37px
+          color: $white
+          text-transform: uppercase
+          text-decoration-line: underline
+          text-decoration-style: dotted
+        &-dates
+          font-family: $font-favbet-text-reg
+          color: $white
+          font-size: 10px
+          text-transform: uppercase
+          margin-top: -3px
+          padding-bottom: 5px
+        &.finished,
+        &.continues
+          &:hover
+            cursor: pointer
+            background: url('../img/table/bg-tabs-active.png') no-repeat 50% 50%/cover
+            background-size: 100% 100%
+        &.active
+          cursor: pointer
+          background: url('../img/table/bg-tabs-active.png') no-repeat 50% 50%/cover
+          background-size: 100% 100%
+          .table__tabs-item-stage
+            text-decoration: none
+          &:hover
+            cursor: pointer
+            background: url('../img/table/bg-tabs-active.png') no-repeat 50% 50%/cover
+            background-size: 100% 100%
+            .table__tabs-item-stage
+              text-decoration: none
+    &__head
+      width: 100%
+      display: flex
+      align-items: center
+      .table__row
+        background: none
+        &-item
+          color: $white
+          font-family: $font-suisse-intl-reg
+          font-size: 12px
+    &__body
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 10px
+    &__row
+      mask-image: url('../img/table/bg-table-row.png')
+      mask-size: 100% 100%
+      mask-repeat: no-repeat
+      background: $blue-bright
+      display: flex
+      width: 100%
+      max-height: 29px
+      min-height: 29px
+      align-items: center
+      justify-content: space-between
+      position: relative
+      padding: 4px 21px 4px 10px
+      margin-bottom: 3px
+      &.you
+        background: $magenta
+        .you
+          color: $magenta
+          background: url('../img/table/you-bg.png') no-repeat 50% 50%/cover
+          font-family: $font-spaceland-ten-obl
+          font-size: 24px
+          line-height: 23px
+          min-width: 46px
+          text-transform: uppercase
+          margin-left: 5px
+          text-align: center
+          margin-bottom: 2px
+          padding-top: 1px
+      &-item
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $white
+        width: 50px
+        font-family: $font-spaceland-ten-obl
+        font-size: 17px
+        white-space: nowrap
+        &:nth-child(1)
+          width: 40px
+          justify-content: flex-start
+        &:nth-child(2)
+          font-family: $font-favbet-text-reg
+          font-size: 12px
+          width: 60px
+        &:nth-child(3)
+          width: 89px
+          font-size: 12px
+          font-family: $font-favbet-text-reg
+        &:nth-child(4)
+          width: 45px
+      &.place1
+        .table__row-item
+          &:nth-child(1)
+            &::after
+              margin-left: 11px
+              width: 18px
+              height: 18px
+              content: ""
+              background: url("../img/table/medal-gold.png") no-repeat 0 0/contain
+      &.place2
+        .table__row-item
+          &:nth-child(1)
+            &::after
+              margin-left: 11px
+              width: 18px
+              height: 18px
+              content: ""
+              background: url("../img/table/medal-silver.png") no-repeat 0 0/contain
+      &.place3
+        .table__row-item
+          &:nth-child(1)
+            &::after
+              margin-left: 11px
+              width: 18px
+              height: 18px
+              content: ""
+              background: url("../img/table/medal-bronze.png") no-repeat 0 0/contain
+
+  .preview
+    max-width: 826px
+    min-width: 826px
+    margin-bottom: 50px
+    position: relative
+    &-link
+      position: absolute
+      width: 100%
+      height: 100%
+      cursor: pointer
+      z-index: 10
+      transition: background-color .5s ease-in-out
+      &:hover
+        &:after
+          content: ""
+          background-color: #0101871A
+          position: absolute
+          width: 100%
+          height: 100%
+    &__text
+      color: $white
+      font-family: $font-suisse-intl-reg
+      line-height: 22px
+      font-size: 17px
+      margin-bottom: 24px
+      text-align: center
+    &__wrap
+      overflow-y: hidden
+      position: relative
+      height: 300px
+      display: flex
+      flex-direction: column
+      align-items: center
+      border-radius: 10px
+      background: url('../img/preview/bg-preview-desk.jpg') no-repeat 0 0/cover
+      background-size: 826px 300px
+      @media screen and (max-width: 1050px)
+        background: url("../img/preview/bg-preview-tab.jpg") no-repeat 50% 50%/cover
+      @media screen and (max-width: 600px)
+        background: url("../img/preview/bg-preview-mob.png") no-repeat 50% 50%/cover
+      &:after
+        z-index: 2
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100px
+        bottom: -2px
+        left: 0
+        background: linear-gradient(180deg, rgba(0, 0, 34, 0.00) 0%, rgba(0, 0, 34, 0.46) 36.97%, rgba(0, 0, 34, 0.70) 100%)
+    &__title
+      font-family: $font-spaceland-ten-obl
+      font-size: 38px
+      line-height: 38px
+      text-shadow: 0px 0px 7.754px #FFE2C7
       color: $white
       display: flex
       align-items: center
@@ -176,782 +852,111 @@ body
           display: flex
           align-items: center
           &::before
-            animation: lightningFlash 5s infinite
+            animation: lightningFlash 4s infinite
             content: ""
             display: block
             position: absolute
-            left: -58px
-            top: -5px
-            width: 97px
-            height: 116px
+            left: -32px
+            top: -4px
+            width: 55px
+            height: 62px
             z-index: 1
             background: url("../img/promo/lightening-left.svg") no-repeat 0 0/contain
           &::after
-            //animation: lightningFlash 4s infinite
             content: ''
             display: block
-            min-width: 53px
-            max-width: 53px
-            height: 100px
-            margin: 0 -5px
+            min-width: 26px
+            max-width: 26px
+            height: 50px
+            margin: 0 -3px 0 -5px
             background: url("../img/promo/bolt.svg") no-repeat 0 0/contain
         &:nth-child(2)
           display: flex
           align-items: center
           &::after
-            animation: lightningFlash 4s infinite
+            animation: lightningFlash 5s infinite
             content: ""
             display: block
             position: absolute
-            right: -62px
-            top: -4px
-            width: 97px
-            height: 116px
+            right: -37px
+            top: -5px
+            width: 48px
+            height: 58px
             z-index: 1
             background: url("../img/promo/lightening-right.svg") no-repeat 0 0/contain
-    &-top
-      margin-top: -20px
-      font-family: $font-spaceland-ten-obl
-      font-size: 80px
-      color: $magenta
-      text-shadow: 0px 1.716px 0px #000
-      text-transform: uppercase
-    &-center
-      z-index: 3
-      display: flex
-      align-items: flex-start
-      margin-top: -40px
-      span
-        color: $magenta
-        font-family: $font-spaceland-ten-obl
-        &:nth-child(1)
-          font-size: 128px
-        &:nth-child(2)
-          font-size: 46px
-          margin-top: 25px
-          margin-left: 10px
-        &:nth-child(3)
-          font-size: 88px
-          margin-left: 10px
-          margin-top: 40px
-    &-bottom
-      margin-top: -10px
-      text-align: center
-      font-family: $font-suisse-intl-reg
-      font-size: 17px
-      line-height: 22px
-      color: $white
-      margin-bottom: 24px
-      span
-        font-family: $font-suisse-intl-reg
-        color: $magenta
-  &__right
-    position: relative
-    max-width: 618px
-    padding-top: 15px
-    margin-right: 100px
-    z-index: 1
-    &-heroes
+    &__cup
+      max-width: 100px
+      margin-top: -30px
       position: relative
-      z-index: 4
-    &-cup
-      position: absolute
-      max-width: 211px
-      top: 4px
-      left: 189px
       picture
-        z-index: 3
         position: relative
+        z-index: 3
       &:before
-        animation: rotateLight 40s linear infinite, blink 3s ease-in-out infinite
+        animation: rotateLight 50s linear infinite, blink 3s ease-in-out infinite
         content: ""
         display: block
         position: absolute
-        left: 52%
-        top: 87px
-        width: 460px
-        height: 384px
+        left: 57%
+        top: 51px
+        width: 253px
+        height: 212px
         background: url("../img/promo/cup-light-desk.png") no-repeat 0 0/contain
         @media screen and (max-width: 1050px)
           background: url("../img/promo/cup-light-tab.png") no-repeat 50% 50%/cover
         @media screen and (max-width: 600px)
           background: url("../img/promo/cup-light-mob.png") no-repeat 50% 0%/cover
         pointer-events: none
-.gide
-  width: 1036px
-  position: relative
-  margin-bottom: -64px
-  &__wrap
-    position: relative
-    width: 100%
-    height: 339px
-    display: flex
-    flex-direction: column
-    align-items: center
-    background: url('../img/gide/bg-gide-desk.jpg') no-repeat 50% 0/cover
-    background-size: 1036px 339px
-    @media screen and (max-width: 1050px)
-      background: url("../img/gide/bg-gide-tab.jpg") no-repeat 50% 0/cover
-      background-size: 100% 309px
-    @media screen and (max-width: 750px)
-      background: url("../img/gide/bg-gide-mob.png") no-repeat 50% 30%/cover
-    @media screen and (max-width: 600px)
-      background: url("../img/gide/bg-gide-mob.png") no-repeat 50% 50%/cover
-      background-size: 600px 487px
-    &:before
-      content: ""
-      position: absolute
-      left: 0
-      top: -2px
-      width: 100%
-      height: 100px
-      background: linear-gradient(180deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
-    &:after
-      content: ""
-      position: absolute
-      left: 0
-      top: 262px
-      width: 100%
-      height: 90px
-      background: linear-gradient(0deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
-  &__title
-    z-index: 2
-    position: relative
-    font-family: $font-spaceland-ten-obl
-    font-size: 68px
-    color: $magenta
-    text-shadow: 0px 1px 0px #000
-    text-transform: uppercase
-    padding-top: 10px
-  &__list
-    position: relative
-    z-index: 2
-    width: 66%
-    display: flex
-    justify-content: space-between
-    margin-top: -20px
-    &-item
-      display: flex
-      align-items: center
-      &-number
-        font-family: $font-spaceland-ten-obl
-        font-size: 102px
-        text-shadow: 0px 0px 10px rgba(255, 226, 199, 0.60), 0px 1px 0px #000
-        color: $white
-      &-txt
-        margin-left: 18px
-        width: 160px
-        text-align: left
-        font-family: $font-suisse-intl-reg
-        font-size: 17px
-        color: $white
-      &:nth-child(1)
-        .gide__list-item-number
-          position: relative
-          &:before
-            animation: lightningFlash 4s infinite
-            z-index: 3
-            position: absolute
-            content: ""
-            width: 50px
-            height: 40px
-            left: -25px
-            top: 45px
-            background: url("../img/gide/light-1-l.svg") no-repeat 50% 50%/cover
-          &:after
-            animation: lightningFlash 5s infinite
-            z-index: 3
-            position: absolute
-            content: ""
-            width: 50px
-            height: 95px
-            right: -21px
-            top: 25px
-            background: url("../img/gide/light-1-r.svg") no-repeat 50% 50%/cover
-      &:nth-child(2)
-        .gide__list-item-number
-          position: relative
-          &:before
-            animation: lightningFlash 4.8s infinite
-            z-index: 3
-            position: absolute
-            content: ""
-            width: 50px
-            height: 40px
-            left: -33px
-            top: 73px
-            background: url("../img/gide/light-2-l.svg") no-repeat 50% 50%/cover
-          &:after
-            animation: lightningFlash 3.2s infinite
-            z-index: 3
-            position: absolute
-            content: ""
-            width: 50px
-            height: 40px
-            left: 17px
-            top: 17px
-            background: url("../img/gide/light-2-r.svg") no-repeat 50% 50%/cover
-      &:nth-child(3)
-        .gide__list-item-number
-          position: relative
-          &:before
-            animation: lightningFlash 4s infinite
-            z-index: 3
-            position: absolute
-            content: ""
-            width: 50px
-            height: 40px
-            left: -33px
-            top: 85px
-            background: url("../img/gide/light-3-l.svg") no-repeat 50% 50%/cover
-          &:after
-            animation: lightningFlash 5s infinite
-            z-index: 3
-            position: absolute
-            content: ""
-            width: 50px
-            height: 40px
-            left: 14px
-            top: 26px
-            background: url("../img/gide/light-3-r.png") no-repeat 50% 50%/cover
-
-      &:nth-child(2)
-        margin-left: 30px
-        //margin: 0 42px
-
-  &__pers
-    position: absolute
-    display: flex
-    width: 105%
-    justify-content: space-between
-    align-items: flex-start
-    margin-top: -40px
-  &__zeus
-    display: none
-  &__genie
-    opacity: 0
-    animation: enter-left 0.6s ease-out forwards, levitate 2s ease-in-out infinite
-    animation-delay: 0.1s, 0.6s
-    max-width: 183px
-    margin-top: 60px
-  &__shaman
-    animation: enter-right 0.6s ease-out forwards
-    max-width: 215px
-    position: relative
-    picture
-      position: relative
+    &__prize
       z-index: 3
-    &:before
-      animation: rotateRight 7s linear infinite
-      z-index: 2
-      content: ""
-      display: block
-      position: absolute
-      left: 23%
-      top: 69%
-      width: 130px
-      height: 130px
-      background: url("../img/gide/man-circle-desk.png") no-repeat 0 0/contain
-      @media screen and (max-width: 1050px)
-        background: url("../img/gide/man-circle-tab.png") no-repeat 50% 50%/cover
-      @media screen and (max-width: 600px)
-        background: url("../img/gide/man-circle-mob.png") no-repeat 50% 0%/cover
-      pointer-events: none
-.drop
-  max-width: 540px
-  width: 100%
-  margin: 0 auto 10px
-  border-radius: 10px
-  position: relative
-  z-index: 5
-  &__bottom-text
-    color: rgba(255, 255, 255, 0.90)
-    font-size: 9px
-    line-height: 12px
-    font-family: $font-suisse-intl-reg
-    opacity: .9
-    text-align: center
-    margin: 15px 0 40px 0
-  .dropdown[open] summary::before
-    transform:  rotate(180deg)
-  summary
-    list-style: none
-    padding: 15px
-    font-family: $font-suisse-intl-reg
-    font-size: 16px
-    cursor: pointer
-    border: 2px solid $white
-    background: rgba(0, 0, 0, 0.30)
-    display: flex
-    align-items: center
-    justify-content: space-between
-    color: $white
-    @media screen and (max-width: 600px)
-      font-size: 14px
-      line-height: 22px
-    &::before
-      content: ""
-      display: block
-      min-width: 25px
-      height: 25px
-      background: url("../img/arrow.png") no-repeat 0 0/contain
-      order: 2
-  &-txt
-    padding: 15px
-    background: rgba(0, 0, 0, 0.30)
-    margin-top: 10px
-    max-height: 350px
-    overflow-y: auto
-    border: 2px solid $white
-    scrollbar-width: auto
-    &::-webkit-scrollbar-thumb
-      background: $green
-      width: 3px
-      border-radius: 3px
-    &::-webkit-scrollbar
-      background: $white
-      width: 3px
-    &-list
       display: flex
       flex-direction: column
-      gap: 15px
-      p, strong
-        font-size: 16px
-        line-height: 26px
-        font-family: $font-suisse-intl-reg
-        color: $white
-        @media screen and (max-width: 600px)
-          font-size: 14px
-          line-height: 22px
-      span
-        font-family: $font-suisse-intl-reg
-        display: block
-      tr,td
-        font-family: $font-suisse-intl-reg
-      td
-        padding-left: 5px
-
-.table
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: flex-start
-  width: 1036px
-  min-height: 440px
-  z-index: 1
-  margin-bottom: 30px
-  &__title
-    font-family: $font-spaceland-ten-obl
-    font-size: 68px
-    text-shadow: 0px 1px 0px #000
-    text-transform: uppercase
-    color: $magenta
-    margin-bottom: -5px
-  &__wrap
-    position: relative
-    width: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
-    margin-bottom: 14px
-    background: url('../img/table/bg-table-desk.jpg') no-repeat 50% 0/cover
-    background-size: 1036px 476px
-    @media screen and (max-width: 1050px)
-      background: url("../img/table/bg-table-tab.jpg") no-repeat 50% 0/cover
-      background-size: 100% 484px
-    @media screen and (max-width: 600px)
-      background: url("../img/table/bg-table-mob.jpg") no-repeat 50% 0/cover
-    &:before
-      content: ""
-      position: absolute
-      left: 0
-      top: -2px
-      width: 100%
-      height: 100px
-      background: linear-gradient(180deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
-    &:after
-      content: ""
-      position: absolute
-      left: 0
-      bottom: 55px
-      width: 100%
-      height: 90px
-      background: linear-gradient(0deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
-  &__pers
-    position: absolute
-    width: 78%
-    bottom: 55px
-    display: flex
-    justify-content: space-between
-    align-items: flex-end
-    &-cup
-      max-width: 140px
-      height: 194px
-      position: relative
-      picture
-        z-index: 2
-        position: relative
-      &::before
-        z-index: 3
-        content: ""
-        display: block
-        position: absolute
-        left: -64%
-        bottom: -16px
-        width: 306px
-        height: 64px
-        background: url("../img/table/stones-desk.png") no-repeat 0 0/contain
-        @media screen and (max-width: 1050px)
-          background: url("../img/table/stones-tab.png") no-repeat 50% 50%/cover
-        @media screen and (max-width: 600px)
-          background: url("../img/table/stones-mob.png") no-repeat 50% 0%/cover
-        pointer-events: none
-      &:after
-        animation: rotateLight 40s linear infinite, blink 3s ease-in-out infinite
-        z-index: 1
-        content: ""
-        display: block
-        position: absolute
-        left: 52%
-        top: 52px
-        width: 330px
-        height: 275px
-        background: url("../img/table/cup-light-desk.png") no-repeat 0 0/contain
-        @media screen and (max-width: 1050px)
-          background: url("../img/table/cup-light-tab.png") no-repeat 50% 50%/cover
-        @media screen and (max-width: 600px)
-          background: url("../img/table/cup-light-mob.png") no-repeat 50% 0%/cover
-        pointer-events: none
-    &-zeus
-      max-width: 217px
-      picture
-        position: relative
-        z-index: 3
-      &:after
-        z-index: 1
-        content: ""
-        display: block
-        position: absolute
-        left: 67%
-        top: 0
-        width: 130px
-        height: 130px
-        background: url("../img/anim-bolt.gif") no-repeat 0 0/contain
-  &__center
-    width: 340px
-    z-index: 4
-  &__tabs
-    width: 103%
-    background: url('../img/table/bg-table-tabs.png') no-repeat 50% 0/cover
-    margin-bottom: 7px
-    display: flex
-    justify-content: center
-    padding: 3px 0
-    &-item
-      padding: 0 10px
-      width: max-content
-      white-space: nowrap
-      height: 52px
-      display: flex
-      flex-direction: column
+      justify-content: flex-start
+      text-transform: uppercase
       align-items: center
-      transition: all .5s ease-in-out
-      z-index: 10
-      &:nth-child(1)
-        width: 145px
-      &:nth-child(2)
-        width: 100px
-      &-stage
-        font-family: $font-spaceland-ten
-        font-size: 24px
-        line-height: 37px
-        color: $white
-        text-transform: uppercase
-        text-decoration-line: underline
-        text-decoration-style: dotted
-      &-dates
-        font-family: $font-favbet-text-reg
-        color: $white
-        font-size: 10px
-        text-transform: uppercase
-        margin-top: -3px
-        padding-bottom: 5px
-      &.active
-        cursor: pointer
-        background: url('../img/table/bg-tabs-active.png') no-repeat 50% 50%/cover
-        background-size: 100% 100%
-        .table__tabs-item-stage
-          text-decoration: none
-      &:hover
-        cursor: pointer
-        background: url('../img/table/bg-tabs-active.png') no-repeat 50% 50%/cover
-        background-size: 100% 100%
-        .table__tabs-item-stage
-          text-decoration: none
-  &__head
-    width: 100%
-    display: flex
-    align-items: center
-    .table__row
-      background: none
+      margin: -4px 0 14px
       &-item
-        color: $white
-        font-family: $font-suisse-intl-reg
-        font-size: 12px
-  &__body
-    width: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
-    margin-bottom: 10px
-  &__row
-    mask-image: url('../img/table/bg-table-row.png')
-    mask-size: 100% 100%
-    mask-repeat: no-repeat
-    background: $blue-bright
-    display: flex
-    width: 100%
-    max-height: 29px
-    min-height: 29px
-    align-items: center
-    justify-content: space-between
-    position: relative
-    padding: 4px 21px 4px 10px
-    margin-bottom: 3px
-    &.you
-      background: $magenta
-      .you
-        color: $magenta
-        background: url('../img/table/you-bg.png') no-repeat 50% 50%/cover
+        display: flex
+        align-items: flex-start
         font-family: $font-spaceland-ten-obl
-        font-size: 24px
-        line-height: 23px
-        min-width: 46px
-        text-transform: uppercase
-        margin-left: 5px
-        text-align: center
-        margin-bottom: 2px
-        padding-top: 1px
-    &-item
-      display: flex
-      align-items: center
-      justify-content: center
-      color: $white
-      width: 50px
-      font-family: $font-spaceland-ten-obl
-      font-size: 17px
-      white-space: nowrap
-      &:nth-child(1)
-        width: 40px
-        justify-content: flex-start
-      &:nth-child(2)
-        font-family: $font-favbet-text-reg
-        font-size: 12px
-        width: 60px
-      &:nth-child(3)
-        width: 89px
-        font-size: 12px
-        font-family: $font-favbet-text-reg
-      &:nth-child(4)
-        width: 45px
-    &.place1
-      .table__row-item
+        color: $magenta
+        gap: 4px
+        text-shadow: 0px 0.68px 0px #000
         &:nth-child(1)
-          &::after
-            margin-left: 11px
-            width: 18px
-            height: 18px
-            content: ""
-            background: url("../img/table/medal-gold.png") no-repeat 0 0/contain
-    &.place2
-      .table__row-item
-        &:nth-child(1)
-          &::after
-            margin-left: 11px
-            width: 18px
-            height: 18px
-            content: ""
-            background: url("../img/table/medal-silver.png") no-repeat 0 0/contain
-    &.place3
-      .table__row-item
-        &:nth-child(1)
-          &::after
-            margin-left: 11px
-            width: 18px
-            height: 18px
-            content: ""
-            background: url("../img/table/medal-bronze.png") no-repeat 0 0/contain
-
-.preview
-  max-width: 826px
-  min-width: 826px
-  margin-bottom: 50px
-  position: relative
-  &-link
-    position: absolute
-    width: 100%
-    height: 100%
-    cursor: pointer
-    z-index: 10
-    transition: background-color .5s ease-in-out
-    &:hover
-      &:after
-        content: ""
-        background-color: #0101871A
-        position: absolute
-        width: 100%
-        height: 100%
-  &__text
-    color: $white
-    font-family: $font-suisse-intl-reg
-    line-height: 22px
-    font-size: 17px
-    margin-bottom: 24px
-    text-align: center
-  &__wrap
-    overflow-y: hidden
-    position: relative
-    height: 300px
-    display: flex
-    flex-direction: column
-    align-items: center
-    border-radius: 10px
-    background: url('../img/preview/bg-preview-desk.jpg') no-repeat 0 0/cover
-    background-size: 826px 300px
-    @media screen and (max-width: 1050px)
-      background: url("../img/preview/bg-preview-tab.jpg") no-repeat 50% 50%/cover
-    @media screen and (max-width: 600px)
-      background: url("../img/preview/bg-preview-mob.png") no-repeat 50% 50%/cover
-    &:after
-      z-index: 2
-      content: ""
+          font-size: 38px
+          line-height: 38px
+        &:nth-child(2)
+          margin-top: -4px
+          span
+            &:nth-child(1)
+              font-size: 18px
+              line-height: 18px
+            &:nth-child(2)
+              font-size: 55px
+              line-height: 44px
+            &:nth-child(3)
+              font-size: 18px
+              line-height: 18px
+            &:nth-child(4)
+              font-size: 35px
+              line-height: 35px
+    &__left,
+    &__right
       position: absolute
-      width: 100%
-      height: 100px
-      bottom: -2px
-      left: 0
-      background: linear-gradient(180deg, rgba(0, 0, 34, 0.00) 0%, rgba(0, 0, 34, 0.46) 36.97%, rgba(0, 0, 34, 0.70) 100%)
-  &__title
-    font-family: $font-spaceland-ten-obl
-    font-size: 38px
-    line-height: 38px
-    text-shadow: 0px 0px 7.754px #FFE2C7
-    color: $white
-    display: flex
-    align-items: center
-    text-transform: uppercase
-    span
-      font-family: $font-spaceland-ten-obl
-      position: relative
-      &:nth-child(1)
-        display: flex
-        align-items: center
-        &::before
-          animation: lightningFlash 4s infinite
-          content: ""
-          display: block
-          position: absolute
-          left: -32px
-          top: -4px
-          width: 55px
-          height: 62px
-          z-index: 1
-          background: url("../img/promo/lightening-left.svg") no-repeat 0 0/contain
-        &::after
-          content: ''
-          display: block
-          min-width: 26px
-          max-width: 26px
-          height: 50px
-          margin: 0 -3px 0 -5px
-          background: url("../img/promo/bolt.svg") no-repeat 0 0/contain
-      &:nth-child(2)
-        display: flex
-        align-items: center
-        &::after
-          animation: lightningFlash 5s infinite
-          content: ""
-          display: block
-          position: absolute
-          right: -37px
-          top: -5px
-          width: 48px
-          height: 58px
-          z-index: 1
-          background: url("../img/promo/lightening-right.svg") no-repeat 0 0/contain
-  &__cup
-    max-width: 100px
-    margin-top: -30px
-    position: relative
-    picture
-      position: relative
+      z-index: 1
+    &__left
+      left: 188px
+      max-width: 182px
+      bottom: -4px
+    &__right
+      right: 183px
+      max-width: 203px
+      bottom: 0
+    &-btn
       z-index: 3
-    &:before
-      animation: rotateLight 50s linear infinite, blink 3s ease-in-out infinite
-      content: ""
-      display: block
-      position: absolute
-      left: 57%
-      top: 51px
-      width: 253px
-      height: 212px
-      background: url("../img/promo/cup-light-desk.png") no-repeat 0 0/contain
-      @media screen and (max-width: 1050px)
-        background: url("../img/promo/cup-light-tab.png") no-repeat 50% 50%/cover
-      @media screen and (max-width: 600px)
-        background: url("../img/promo/cup-light-mob.png") no-repeat 50% 0%/cover
-      pointer-events: none
-  &__prize
-    z-index: 3
-    display: flex
-    flex-direction: column
-    justify-content: flex-start
-    text-transform: uppercase
-    align-items: center
-    margin: -4px 0 14px
-    &-item
-      display: flex
-      align-items: flex-start
-      font-family: $font-spaceland-ten-obl
-      color: $magenta
-      gap: 4px
-      text-shadow: 0px 0.68px 0px #000
-      &:nth-child(1)
-        font-size: 38px
-        line-height: 38px
-      &:nth-child(2)
-        margin-top: -4px
-        span
-          &:nth-child(1)
-            font-size: 18px
-            line-height: 18px
-          &:nth-child(2)
-            font-size: 55px
-            line-height: 44px
-          &:nth-child(3)
-            font-size: 18px
-            line-height: 18px
-          &:nth-child(4)
-            font-size: 35px
-            line-height: 35px
-  &__left,
-  &__right
-    position: absolute
-    z-index: 1
-  &__left
-    left: 188px
-    max-width: 182px
-    bottom: -4px
-  &__right
-    right: 183px
-    max-width: 203px
-    bottom: 0
-  &-btn
-    z-index: 3
-    min-width: 157px
-    .btn-txt
-      font-size: 20px
-      padding: 4px 38px 5px
+      min-width: 157px
+      .btn-txt
+        font-size: 20px
+        padding: 4px 38px 5px
 
 // loader
 
@@ -994,10 +999,6 @@ body
     display: inline-block
     margin: 0 4px 2px 0
 
-
-body.dark
-  .spinner-overlay
-    background: $black
 
 @keyframes rotate
   0%

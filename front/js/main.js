@@ -1,50 +1,134 @@
 (function () {
 
-    const apiURL = 'https://fav-prom.com/api_your_promo'
+    const apiURL = 'https://fav-prom.com/api_game_of_gods'
 
-    const getActiveWeek = (promoStartDate, weekDuration) => {
-        const currentDate = new Date();
-        let weekDates = [];
 
-        const Day = 24 * 60 * 60 * 1000;
-        const Week = weekDuration * Day;
+    // const currentDate = new Date();
+    const currentDate = new Date('2025-06-07T20:30:00+03:00');
 
-        const formatDate = (date) =>
-            `${date.getDate().toString().padStart(2, "0")}.${(date.getMonth() + 1).toString().padStart(2, "0")}`;
 
-        const calculateWeekPeriod = (weekIndex) => {
-            const baseStart = promoStartDate.getTime();
-            const start = new Date(baseStart + weekIndex * Week);
-            let end = new Date(start.getTime() + (weekDuration * Day - 1));
-            return { start, end };
-        };
+    const customPeriods = [
+        { start: new Date('2025-06-15'), end: new Date('2025-06-22'), number: 1 },
+        { start: new Date('2025-06-23'), end: new Date('2025-07-13'), number: 2 },
+    ];
 
-        let activeWeekIndex = null;
+    const matchDates = [
+        { date: new Date('2025-06-07T20:30:00+03:00')},
+        { date: new Date('2025-06-08T20:30:00+03:00')},
+    ];
 
-        // Перевірка поточного тижня
-        for (let i = 0; i < 10; i++) { // Обмежуємо 10 тижнями (якщо потрібно більше, просто змініть лічильник)
-            const { start, end } = calculateWeekPeriod(i);
-            if (currentDate >= start && currentDate <= end) {
-                activeWeekIndex = i + 1;
-                break;
+
+
+    let activePeriodByDate = getActiveWeek(currentDate, customPeriods);
+    // const activePeriodByDate = getActiveWeek(currentDate, customPeriods);
+
+    let currentActivePeriod = activePeriodByDate;
+
+    function getActiveWeek(date, periods) {
+        const now = new Date(date);
+        now.setHours(0, 0, 0, 0);
+
+        for (let i = 0; i < periods.length; i++) {
+            const start = new Date(periods[i].start);
+            const end = new Date(periods[i].end);
+            start.setHours(0, 0, 0, 0);
+            end.setHours(0, 0, 0, 0);
+
+            if (now >= start && now <= end) {
+                return periods[i].number;
+            }
+
+            if (now < start) {
+                return periods[0].number;
             }
         }
 
-        return activeWeekIndex;
-    };
+        return periods[periods.length - 1].number;
+    }
 
-    const promoStartDate = new Date("2025-05-05T00:00:00");
-    const weekDuration = 10;
+    function setActiveTabByDate(activeNumber) {
+        document.querySelectorAll('[class*="period-"]').forEach(el => {
+            el.classList.remove('active');
+        });
 
-    const activeWeek = getActiveWeek(promoStartDate, weekDuration) || 1;
+        const activeElement = document.querySelector(`.period-${activeNumber}`);
 
+        if (activeElement) {
+            activeElement.classList.add('active');
+        }
+    }
+
+    setActiveTabByDate(currentActivePeriod);
+
+    // click on finished tabs
+    function updateFinishedTabs() {
+        document.querySelectorAll('[class*="period-"]').forEach(el => {
+            const match = el.className.match(/period-(\d+)/);
+            if (!match) return;
+
+            const periodNum = parseInt(match[1]);
+
+            el.classList.remove('finished', 'continues');
+            if (periodNum < activePeriodByDate) {
+                el.classList.add('finished');
+            } else if (periodNum === activePeriodByDate) {
+                el.classList.add('continues');
+            }
+
+            if (!el.dataset.listenerAdded) {
+                el.addEventListener('click', () => {
+                    if (periodNum <= activePeriodByDate) {
+                        currentActivePeriod = periodNum;
+                        setActiveTabByDate(currentActivePeriod);
+                    } else {
+                        console.log(`Перемикання на період ${periodNum} заборонене. Активний період по даті: ${activePeriodByDate}`);
+                    }
+                });
+                el.dataset.listenerAdded = 'true';
+            }
+        });
+    }
+    updateFinishedTabs();
+
+    function checkIsLiveMatch(currentDate) {
+        if (!existingUser) {
+            return
+        }
+        let foundLive = false;
+
+        for (let match of matchDates) {
+            const start = new Date(match.date);
+            const end = new Date(start.getTime() + 2 * 60 * 60 * 1000); // +2 години
+
+            if (currentDate >= start && currentDate <= end) {
+                foundLive = true;
+                break; // знайшли — далі не перевіряємо
+            }
+        }
+
+        if (foundLive) {
+            console.log("show");
+            redirectBtns.forEach(btn => btn.classList.add('hide'));
+            btnCont.forEach(cont => cont.classList.remove('hide'));
+        } else {
+            console.log("NOT show");
+            redirectBtns.forEach(btn => btn.classList.remove('hide'));
+            btnCont.forEach(cont => cont.classList.add('hide'));
+        }
+    }
+
+    setInterval(() => {
+        checkIsLiveMatch(currentDate);
+    }, 1 * 1000);
 
     const mainPage = document.querySelector(".fav-page"),
         unauthMsgs = document.querySelectorAll('.unauth-msg'),
         participateBtns = document.querySelectorAll('.part-btn'),
-        redirectBtns = document.querySelectorAll('.btn-join'),
+        redirectBtns = document.querySelectorAll('.play-btn'),
+        btnCont = document.querySelectorAll('.btnCont'),
         loader = document.querySelector(".spinner-overlay")
 
+    let existingUser = false;
     const ukLeng = document.querySelector('#ukLeng');
     const enLeng = document.querySelector('#enLeng');
 
@@ -57,7 +141,8 @@
 
     let loaderBtn = false
 
-    let locale = "en"
+    // let locale = "en"
+    let locale = sessionStorage.getItem("locale") ?? "uk"
 
     if (ukLeng) locale = 'uk';
     if (enLeng) locale = 'en';
@@ -68,7 +153,9 @@
 
     let i18nData = {};
     const translateState = true;
-    let userId = null;
+
+    // let userId = null;
+    let userId = Number(sessionStorage.getItem("userId")) ?? null
 
     const request = function (link, extraOptions) {
         return fetch(apiURL + link, {
@@ -121,6 +208,9 @@
 
         function quickCheckAndRender() {
             checkUserAuth();
+            participateBtns.forEach(btn => {
+                btn.addEventListener('click', participate);
+            })
 
         }
 
@@ -144,7 +234,7 @@
             .then(json => {
                 i18nData = json;
                 translate();
-                const targetNode = document.getElementById("goals-or-zeros-leage");
+                const targetNode = document.getElementById("game-of-gods");
                 const mutationObserver = new MutationObserver(function (mutations) {
                     mutationObserver.disconnect();
                     translate();
@@ -180,6 +270,11 @@
                 if (res.userid) {
                     hideElements(participateBtns);
                     showElements(redirectBtns);
+                    existingUser = true;
+                    checkIsLiveMatch(currentDate);
+                    setInterval(() => {
+                        checkIsLiveMatch(currentDate);
+                    }, 600 * 1000);
                 } else {
                     showElements(participateBtns);
                     hideElements(redirectBtns);
@@ -367,7 +462,7 @@
             });
     }
 
-    // loadTranslations().then(init) запуск ініту сторінки
+    loadTranslations().then(init) //запуск ініту сторінки
 
     // TEST
 
@@ -393,6 +488,9 @@
     });
 
     const authBtn = document.querySelector(".auth-btn")
+    const betBtn = document.querySelector(".btn-bet-online")
+    const liveBlock = document.querySelector(".liveBlock")
+    const secondPer = document.querySelector(".secondPer")
 
     authBtn.addEventListener("click", () =>{
         if(userId){
@@ -401,6 +499,32 @@
             sessionStorage.setItem("userId", "777777")
         }
         window.location.reload()
+    });
+
+    betBtn.addEventListener("click", () =>{
+        if(sessionStorage.getItem("userId")=="777777"){
+            unauthMsgs.forEach(item => item.classList.add('hide'));
+            participateBtns.forEach(item => item.classList.add('hide'));
+            redirectBtns.forEach(item => item.classList.remove('hide'));
+        }else{
+            sessionStorage.setItem("userId", "777")
+        }
+        // window.location.reload()
+    });
+
+    liveBlock.addEventListener("click", () =>{
+        const testDate = new Date('2025-06-02T20:30:00+03:00');
+        checkIsLiveMatch(testDate);
+        console.log("Live Match for test");
+    });
+
+    secondPer.addEventListener("click", () => {
+        currentActivePeriod = 2;
+        activePeriodByDate = 2;
+
+        setActiveTabByDate(currentActivePeriod);
+        updateFinishedTabs();
+        console.log("2 period активний");
     });
 
 })();

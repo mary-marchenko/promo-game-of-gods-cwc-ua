@@ -4,9 +4,10 @@ button.menu-btn menu
     button.lng-btn en
     button.auth-btn auth
     button.btn-bet-online bet online
-    button.btn-play-bet play bet
+    button.liveBlock live
+    button.secondPer 2 period
 
-.fav-page.loading
+.fav-page.loading#game-of-gods
     .spinner-overlay
         .spinner
     .promo
@@ -98,10 +99,10 @@ button.menu-btn menu
                         img(src="img/table/zeus-desk.png" alt="zeus")
             .table__center
                 .table__tabs
-                    .table__tabs-item.active(data-week="1")
+                    .table__tabs-item.active.period-1(data-week="1")
                         .table__tabs-item-stage(data-translate="tableStage1") Груповий етап
                         .table__tabs-item-dates(data-translate="tableDate1") 15.06 - 23.06.
-                    .table__tabs-item(data-week="2")
+                    .table__tabs-item.period-2(data-week="2")
                         .table__tabs-item-stage(data-translate="tableStage2") Плей-оф
                         .table__tabs-item-dates(data-translate="tableDate2") 23.06 - 13.07.
                 .table__head
