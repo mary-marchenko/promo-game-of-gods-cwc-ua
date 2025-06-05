@@ -8,8 +8,8 @@
 
 
     const customPeriods = [
-        { start: new Date('2025-06-15'), end: new Date('2025-06-22'), number: 1 },
-        { start: new Date('2025-06-23'), end: new Date('2025-07-13'), number: 2 },
+        { start: new Date('2025-06-15'), end: new Date('2025-06-22T23:59:59.999+03:00'), number: 1 },
+        { start: new Date('2025-06-23'), end: new Date('2025-07-13T23:59:59.999+03:00'), number: 2 },
     ];
 
     const matchDates = [
