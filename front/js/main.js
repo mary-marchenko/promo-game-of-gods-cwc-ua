@@ -4,7 +4,7 @@
 
 
     // const currentDate = new Date();
-    const currentDate = new Date('2025-06-07T20:30:00+03:00');
+    const currentDate = new Date();
 
 
     const customPeriods = [
@@ -122,14 +122,15 @@
 
     setInterval(() => {
         checkIsLiveMatch(currentDate);
-    }, 1 * 1000);
+    }, 60 * 1000);
 
     const mainPage = document.querySelector(".fav-page"),
         unauthMsgs = document.querySelectorAll('.unauth-msg'),
         participateBtns = document.querySelectorAll('.part-btn'),
         redirectBtns = document.querySelectorAll('.play-btn'),
         btnCont = document.querySelectorAll('.btnCont'),
-        loader = document.querySelector(".spinner-overlay")
+        loader = document.querySelector(".spinner-overlay"),
+        gideBlock = document.querySelector(".gide");
 
     let existingUser = false;
     const ukLeng = document.querySelector('#ukLeng');
@@ -150,7 +151,7 @@
     if (ukLeng) locale = 'uk';
     if (enLeng) locale = 'en';
 
-    let debug = true
+    let debug = false
 
     if (debug) hideLoader()
 
@@ -275,6 +276,7 @@
                     showElements(redirectBtns);
                     existingUser = true;
                     checkIsLiveMatch(currentDate);
+                    gideBlock.classList.add("hide")
                     if (liveMatchInterval) {
                         clearInterval(liveMatchInterval);
                     }
@@ -500,6 +502,7 @@
     const betBtn = document.querySelector(".btn-bet-online")
     const liveBlock = document.querySelector(".liveBlock")
     const secondPer = document.querySelector(".secondPer")
+    const withoutGide = document.querySelector(".withoutGide")
 
     authBtn.addEventListener("click", () =>{
         if(userId){
@@ -515,6 +518,7 @@
             unauthMsgs.forEach(item => item.classList.add('hide'));
             participateBtns.forEach(item => item.classList.add('hide'));
             redirectBtns.forEach(item => item.classList.remove('hide'));
+            gideBlock.classList.add("hide")
         }else{
             sessionStorage.setItem("userId", "777")
         }
@@ -522,8 +526,10 @@
     });
 
     liveBlock.addEventListener("click", () =>{
-        const testDate = new Date('2025-06-02T20:30:00+03:00');
-        checkIsLiveMatch(testDate);
+        redirectBtns.forEach(btn => btn.classList.add('hide'));
+        participateBtns.forEach(btn => btn.classList.add('hide'));
+        unauthMsgs.forEach(btn => btn.classList.add('hide'));
+        btnCont.forEach(cont => cont.classList.remove('hide'));
         console.log("Live Match for test");
     });
 
@@ -535,5 +541,9 @@
         updateFinishedTabs();
         console.log("2 period активний");
     });
+
+    withoutGide.addEventListener("click", () => {
+        gideBlock.classList.toggle("hide")
+    })
 
 })();

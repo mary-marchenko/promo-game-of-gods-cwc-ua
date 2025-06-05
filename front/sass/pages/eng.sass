@@ -12,3 +12,18 @@ picture
       display: none
     &.en
       display: inline-block
+  .gide
+    &__list
+      &-item
+        &:nth-child(2)
+          margin-left: 0
+  .drop
+    summary
+      @media screen and (max-width: 350px)
+        padding: 10px
+        font-size: 11px
+        line-height: 17px
+      @media screen and (max-width: 290px)
+        font-size: 10px
+        line-height: 15px
+

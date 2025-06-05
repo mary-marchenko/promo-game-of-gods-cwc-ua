@@ -61,7 +61,7 @@ body
     &::before
       content: ""
       display: block
-      width: 95%
+      width: 91%
       height: 85%
       border-radius: 10px
       position: absolute
@@ -112,6 +112,7 @@ body
         display: flex
         justify-content: center
         align-items: baseline
+        mask-image: url("../img/btn-s.png")
         span
           display: block
         &-text
@@ -225,11 +226,11 @@ body
           font-family: $font-spaceland-ten-obl
           &:nth-child(1)
             font-size: 128px
-          &:nth-child(2)
+          &:nth-child(3)
             font-size: 46px
             margin-top: 25px
             margin-left: 10px
-          &:nth-child(3)
+          &:nth-child(2)
             font-size: 88px
             margin-left: 10px
             margin-top: 40px
@@ -241,6 +242,7 @@ body
         line-height: 22px
         color: $white
         margin-bottom: 24px
+        z-index: 2
         span
           font-family: $font-suisse-intl-reg
           color: $magenta
@@ -488,6 +490,10 @@ body
       @media screen and (max-width: 600px)
         font-size: 14px
         line-height: 22px
+        &:before
+          margin-left: 10px
+      @media screen and (max-width: 400px)
+        padding: 12px
       &::before
         content: ""
         display: block
