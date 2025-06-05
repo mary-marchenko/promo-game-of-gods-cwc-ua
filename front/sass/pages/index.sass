@@ -582,14 +582,14 @@ body
         content: ""
         position: absolute
         left: 0
-        bottom: 55px
+        bottom: 45px
         width: 100%
         height: 90px
         background: linear-gradient(0deg, #000022 0%, rgba(0, 0, 34, 0) 100%)
     &__pers
       position: absolute
       width: 78%
-      bottom: 55px
+      bottom: 45px
       display: flex
       justify-content: space-between
       align-items: flex-end
@@ -719,17 +719,16 @@ body
       flex-direction: column
       align-items: center
       margin-bottom: 10px
-      min-height: 318px
-      max-height: 318px
-      background: url('../img/table/table-rows-bg.png') no-repeat 50% 50%/cover
-      background-size: 100% 100%
+      min-height: 321px
+      max-height: 321px
       &-other
-        .table__row
-          mask-image: url('../img/table/bg-table-row.png')
-          mask-size: 100% 100%
-          mask-repeat: no-repeat
-          background: $blue-bright
+        min-height: 93px
+        max-height: 93px
     &__row
+      mask-image: url('../img/table/bg-table-row.png')
+      mask-size: 100% 100%
+      mask-repeat: no-repeat
+      background: $blue-bright
       display: flex
       width: 100%
       max-height: 29px
@@ -740,9 +739,6 @@ body
       padding: 4px 21px 4px 10px
       margin-bottom: 3px
       &.you
-        mask-image: url('../img/table/bg-table-row.png')
-        mask-size: 100% 100%
-        mask-repeat: no-repeat
         background: $magenta
         .you
           color: $magenta
