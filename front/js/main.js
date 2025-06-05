@@ -276,8 +276,11 @@
                 btn.addEventListener('click', participate);
             })
 
+            let currentTab = Number(document.querySelector(".table__tabs-item.active").getAttribute("data-week"))
+
             // renderUsers();
 
+            console.log(currentTab);
 
 
         }
@@ -405,8 +408,8 @@
     function renderUsers(week) {
         request(`/users/${week}`)
             .then(data => {
-                const users = data;
-                populateUsersTable(users, userId, week);
+                const users = data.users;
+                populateUsersTable(users, userId, currentTab);
             });
     }
 
@@ -416,8 +419,7 @@
         if (!users?.length) return;
         const currentUser = users.find(user => user.userid === currentUserId);
         const isTopCurrentUser = currentUser && users.slice(0, 10).some(user => user.userid === currentUserId);
-        const topUsersLength = !userId || isTopCurrentUser  ? 13 : 10;
-        const topUsers = users.slice(0, topUsersLength);
+        const topUsers = users.slice(0, 10);
         topUsers.forEach(user => {
             displayUser(user, user.userid === currentUserId, resultsTable, topUsers, isTopCurrentUser, week);
         });
