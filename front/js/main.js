@@ -81,6 +81,7 @@
     }, 600 * 1000);
 
     let activePeriodByDate = getActiveWeek(currentDate, customPeriods);
+    console.log(activePeriodByDate+" - це activePeriodByDate")
     // const activePeriodByDate = getActiveWeek(currentDate, customPeriods);
 
     let currentActivePeriod = activePeriodByDate;
@@ -124,6 +125,16 @@
             renderUsers(tabWeek)
         }
     })
+
+    document.querySelectorAll('.table__tabs-item').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+// Додаємо клас active до відповідного табу
+    const activeTab = document.querySelector(`.table__tabs-item.period-${currentActivePeriod}`);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    }
 
     // function setActiveTabByDate(activeNumber) {
     //     document.querySelectorAll('[class*="period-"]').forEach(el => {
@@ -437,7 +448,8 @@
         if (!users?.length) return;
         const currentUser = users.find(user => user.userid === currentUserId);
         const isTopCurrentUser = currentUser && users.slice(0, 10).some(user => user.userid === currentUserId);
-        const topUsers = users.slice(0, 10);
+        const topCount = currentUser ? 10 : 13;
+        const topUsers = users.slice(0, topCount);
         topUsers.forEach(user => {
             displayUser(user, user.userid === currentUserId, resultsTable, topUsers, isTopCurrentUser, week);
         });
@@ -497,7 +509,6 @@
         }
     }
 
-
     function translateKey(key, defaultValue) {
         if (!key) {
             return;
@@ -513,16 +524,15 @@
     }
 
     function getPrizeTranslationKey(place, week) {
-        if (place <= 3) return `prize_1-3`;
-        if (place <= 10) return `prize-4-10`;
-        if (place <= 25) return `prize-11-25`;
-        if (place <= 50) return `prize-26-50`;
-        if (place <= 75) return `prize-51-75`;
-        if (place <= 100) return `prize-76-100`;
-        if (place <= 125) return `prize-101-125`;
-        if (place <= 150) return `prize-126-150`;
-        if (place <= 175) return `prize-151-175`;
-        if (place <= 200) return `prize}-176-200`;
+        if (place <= 10) return `prize_${place}`;
+        if (place <= 35) return `prize_11_35`;
+        if (place <= 50) return `prize_36_50`;
+        if (place <= 75) return `prize_51_75`;
+        if (place <= 100) return `prize_76_100`;
+        if (place <= 125) return `prize_101_125`;
+        if (place <= 150) return `prize_126_150`;
+        if (place <= 175) return `prize_151_175`;
+        if (place <= 200) return `prize_176_200`;
     }
 
     function participate() {
