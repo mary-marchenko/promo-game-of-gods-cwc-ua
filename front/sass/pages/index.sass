@@ -71,6 +71,9 @@ body
       box-shadow: 0px 0px 28px $green
       transition: all .5s ease-in-out
       z-index: 0
+    &.part-btn
+      &::before
+        width: 86%
     .btn-txt
       width: 100%
       display: block
@@ -153,6 +156,16 @@ body
       bottom: -2px
       z-index: 2
       background: linear-gradient(180deg, rgba(0, 0, 34, 0.00) 0%, rgba(0, 0, 34, 0.66) 36.97%, #002 100%)
+    &:before
+      content: ""
+      display: block
+      width: 100px
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      z-index: 2
+      background: linear-gradient(270deg, rgba(0, 0, 34, 0.00) 0%, rgba(0, 0, 34, 0.66) 36.97%, #002 100%)
     &__left
       display: flex
       flex-direction: column
@@ -252,6 +265,16 @@ body
       padding-top: 15px
       margin-right: 100px
       z-index: 1
+      &:after
+        content: ""
+        display: block
+        width: 260px
+        height: 130%
+        position: absolute
+        right: -105px
+        top: -40px
+        z-index: 2
+        background: linear-gradient(90deg, rgba(0, 0, 34, 0.00) 0%, rgba(0, 0, 34, 0.86) 36.97%, #002 100%)
       &-heroes
         position: relative
         z-index: 4
@@ -468,6 +491,9 @@ body
     border-radius: 10px
     position: relative
     z-index: 5
+    & > *
+      font-family: inherit
+      color: $white
     &__bottom-text
       color: rgba(255, 255, 255, 0.90)
       font-size: 9px
@@ -490,6 +516,7 @@ body
       align-items: center
       justify-content: space-between
       color: $white
+      user-select: none
       @media screen and (max-width: 600px)
         font-size: 14px
         line-height: 22px
@@ -504,6 +531,8 @@ body
         height: 25px
         background: url("../img/arrow.png") no-repeat 0 0/contain
         order: 2
+      ::-webkit-details-marker
+        display: none
     &-txt
       padding: 15px
       background: rgba(0, 0, 0, 0.30)
@@ -537,6 +566,7 @@ body
         tr,td
           font-family: $font-suisse-intl-reg
           color: $white
+          width: 50%
         td
           padding-left: 5px
 

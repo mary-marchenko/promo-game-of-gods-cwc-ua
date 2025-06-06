@@ -15,6 +15,8 @@
       max-height: 777px
       &:after
         height: 300px
+      &:before
+        display: none
       &__left
         margin: -60px auto 0
         width: 704px
@@ -55,6 +57,8 @@
       &__right
         margin: 0 auto
         padding-top: 60px
+        &:after
+          display: none
         &-cup
           top: 62px
           left: 202px
@@ -132,7 +136,7 @@
         &-item
           &:nth-child(2)
             justify-content: center
-            margin-left: 48px
+            margin-left: 52px
       &__pers
         width: 61%
         margin-top: -25px
@@ -167,7 +171,7 @@
         justify-content: center
         align-items: flex-end
         bottom: 0
-        top: -290px
+        top: -262px
         background: url("../img/table/bg-table-mob.jpg") no-repeat 50% 0/cover
         &:after
           content: ""
@@ -185,7 +189,7 @@
           max-width: 120px
           height: 173px
           margin-left: 0
-          margin-bottom: 50px
+          margin-bottom: 75px
           picture
             position: relative
             z-index: 4
@@ -279,6 +283,10 @@
       &__list
         margin-top: 0
         width: 31%
+        &-item
+          &-number
+            line-height: 136px
+
     .table
       padding-top: 126px
       &__title
