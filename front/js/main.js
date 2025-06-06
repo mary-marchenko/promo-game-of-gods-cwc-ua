@@ -4,7 +4,7 @@
 
 
     // const currentDate = new Date();
-    const currentDate = new Date('2025-06-23T00:00:00Z');
+    const currentDate = new Date('2025-06-29T00:00:00Z');
 
 
     const customPeriods = [
@@ -107,9 +107,12 @@
         return periods[periods.length - 1].number;
     }
 
+    let tableTabs = document.querySelectorAll('.table__tabs-item');
+    console.log(currentActivePeriod)
+
     document.addEventListener("click", e =>{
         if(e.target.closest(".table__tabs-item")){
-            if(Number(e.target.closest(".table__tabs-item").getAttribute("data-week")) > activeWeek) {
+            if(Number(e.target.closest(".table__tabs-item").getAttribute("data-week")) > currentActivePeriod) {
                 return
             }
             e.target.closest(".table__tabs-item").style.pointerEvents = "initial";
