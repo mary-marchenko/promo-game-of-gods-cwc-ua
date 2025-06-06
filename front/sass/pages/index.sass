@@ -531,8 +531,10 @@ body
         height: 25px
         background: url("../img/arrow.png") no-repeat 0 0/contain
         order: 2
-      ::-webkit-details-marker
-        display: none
+    summary::-webkit-details-marker
+      display: none
+    > summary
+      list-style: none
     &-txt
       padding: 15px
       background: rgba(0, 0, 0, 0.30)
@@ -999,6 +1001,8 @@ body
     &-btn
       z-index: 3
       min-width: 157px
+      &::before
+        width: 86%
       .btn-txt
         font-size: 20px
         padding: 4px 38px 5px

@@ -13,66 +13,66 @@
     ];
 
     const matchDates = [
-        { start: new Date('2025-06-15T03:00:00+03:00'), number: 1 },
-        { start: new Date('2025-06-15T19:00:00+03:00'), number: 2 },
-        { start: new Date('2025-06-15T22:00:00+03:00'), number: 3 },
+        { start: new Date('2025-06-15T00:00:00Z'), number: 1 },
+        { start: new Date('2025-06-15T16:00:00Z'), number: 2 },
+        { start: new Date('2025-06-15T19:00:00Z'), number: 3 },
 
-        { start: new Date('2025-06-16T01:00:00+03:00'), number: 4 },
-        { start: new Date('2025-06-16T05:00:00+03:00'), number: 5 },
-        { start: new Date('2025-06-16T22:00:00+03:00'), number: 6 },
+        { start: new Date('2025-06-15T22:00:00Z'), number: 4 },
+        { start: new Date('2025-06-16T02:00:00Z'), number: 5 },
+        { start: new Date('2025-06-16T19:00:00Z'), number: 6 },
 
-        { start: new Date('2025-06-17T01:00:00+03:00'), number: 7 },
-        { start: new Date('2025-06-17T04:00:00+03:00'), number: 8 },
-        { start: new Date('2025-06-17T19:00:00+03:00'), number: 9 },
-        { start: new Date('2025-06-17T22:00:00+03:00'), number: 10 },
+        { start: new Date('2025-06-16T22:00:00Z'), number: 7 },
+        { start: new Date('2025-06-17T01:00:00Z'), number: 8 },
+        { start: new Date('2025-06-17T16:00:00Z'), number: 9 },
+        { start: new Date('2025-06-17T19:00:00Z'), number: 10 },
 
-        { start: new Date('2025-06-18T01:00:00+03:00'), number: 11 },
-        { start: new Date('2025-06-18T04:00:00+03:00'), number: 12 },
-        { start: new Date('2025-06-18T19:00:00+03:00'), number: 13 },
-        { start: new Date('2025-06-18T22:00:00+03:00'), number: 14 },
+        { start: new Date('2025-06-17T22:00:00Z'), number: 11 },
+        { start: new Date('2025-06-18T01:00:00Z'), number: 12 },
+        { start: new Date('2025-06-18T16:00:00Z'), number: 13 },
+        { start: new Date('2025-06-18T19:00:00Z'), number: 14 },
 
-        { start: new Date('2025-06-19T01:00:00+03:00'), number: 15 },
-        { start: new Date('2025-06-19T04:00:00+03:00'), number: 16 },
-        { start: new Date('2025-06-19T19:00:00+03:00'), number: 17 },
-        { start: new Date('2025-06-19T22:00:00+03:00'), number: 18 },
+        { start: new Date('2025-06-18T22:00:00Z'), number: 15 },
+        { start: new Date('2025-06-19T01:00:00Z'), number: 16 },
+        { start: new Date('2025-06-19T16:00:00Z'), number: 17 },
+        { start: new Date('2025-06-19T19:00:00Z'), number: 18 },
 
-        { start: new Date('2025-06-20T01:00:00+03:00'), number: 19 },
-        { start: new Date('2025-06-20T04:00:00+03:00'), number: 20 },
-        { start: new Date('2025-06-20T19:00:00+03:00'), number: 21 },
-        { start: new Date('2025-06-20T21:00:00+03:00'), number: 22 },
+        { start: new Date('2025-06-19T22:00:00Z'), number: 19 },
+        { start: new Date('2025-06-20T01:00:00Z'), number: 20 },
+        { start: new Date('2025-06-20T16:00:00Z'), number: 21 },
+        { start: new Date('2025-06-20T18:00:00Z'), number: 22 },
 
-        { start: new Date('2025-06-21T01:00:00+03:00'), number: 23 },
-        { start: new Date('2025-06-21T04:00:00+03:00'), number: 24 },
-        { start: new Date('2025-06-21T19:00:00+03:00'), number: 25 },
-        { start: new Date('2025-06-21T22:00:00+03:00'), number: 26 },
+        { start: new Date('2025-06-20T22:00:00Z'), number: 23 },
+        { start: new Date('2025-06-21T01:00:00Z'), number: 24 },
+        { start: new Date('2025-06-21T16:00:00Z'), number: 25 },
+        { start: new Date('2025-06-21T19:00:00Z'), number: 26 },
 
-        { start: new Date('2025-06-22T01:00:00+03:00'), number: 27 },
-        { start: new Date('2025-06-22T04:00:00+03:00'), number: 28 },
-        { start: new Date('2025-06-22T19:00:00+03:00'), number: 29 },
-        { start: new Date('2025-06-22T22:00:00+03:00'), number: 30 },
+        { start: new Date('2025-06-21T22:00:00Z'), number: 27 },
+        { start: new Date('2025-06-22T01:00:00Z'), number: 28 },
+        { start: new Date('2025-06-22T16:00:00Z'), number: 29 },
+        { start: new Date('2025-06-22T19:00:00Z'), number: 30 },
 
-        { start: new Date('2025-06-23T01:00:00+03:00'), number: 31 },
-        { start: new Date('2025-06-23T04:00:00+03:00'), number: 32 },
-        { start: new Date('2025-06-23T22:00:00+03:00'), number: 33 },
-        { start: new Date('2025-06-23T22:00:00+03:00'), number: 34 },
+        { start: new Date('2025-06-22T22:00:00Z'), number: 31 },
+        { start: new Date('2025-06-23T01:00:00Z'), number: 32 },
+        { start: new Date('2025-06-23T19:00:00Z'), number: 33 },
+        { start: new Date('2025-06-23T19:00:00Z'), number: 34 },
 
-        { start: new Date('2025-06-24T04:00:00+03:00'), number: 35 },
-        { start: new Date('2025-06-24T04:00:00+03:00'), number: 36 },
-        { start: new Date('2025-06-24T22:00:00+03:00'), number: 37 },
-        { start: new Date('2025-06-24T22:00:00+03:00'), number: 38 },
+        { start: new Date('2025-06-24T01:00:00Z'), number: 35 },
+        { start: new Date('2025-06-24T01:00:00Z'), number: 36 },
+        { start: new Date('2025-06-24T19:00:00Z'), number: 37 },
+        { start: new Date('2025-06-24T19:00:00Z'), number: 38 },
 
-        { start: new Date('2025-06-25T04:00:00+03:00'), number: 39 },
-        { start: new Date('2025-06-25T04:00:00+03:00'), number: 40 },
-        { start: new Date('2025-06-25T22:00:00+03:00'), number: 41 },
-        { start: new Date('2025-06-25T22:00:00+03:00'), number: 42 },
+        { start: new Date('2025-06-25T01:00:00Z'), number: 39 },
+        { start: new Date('2025-06-25T01:00:00Z'), number: 40 },
+        { start: new Date('2025-06-25T19:00:00Z'), number: 41 },
+        { start: new Date('2025-06-25T19:00:00Z'), number: 42 },
 
-        { start: new Date('2025-06-26T04:00:00+03:00'), number: 43 },
-        { start: new Date('2025-06-26T04:00:00+03:00'), number: 44 },
-        { start: new Date('2025-06-26T22:00:00+03:00'), number: 45 },
-        { start: new Date('2025-06-26T22:00:00+03:00'), number: 46 },
+        { start: new Date('2025-06-26T01:00:00Z'), number: 43 },
+        { start: new Date('2025-06-26T01:00:00Z'), number: 44 },
+        { start: new Date('2025-06-26T19:00:00Z'), number: 45 },
+        { start: new Date('2025-06-26T19:00:00Z'), number: 46 },
 
-        { start: new Date('2025-06-27T04:00:00+03:00'), number: 47 },
-        { start: new Date('2025-06-27T04:00:00+03:00'), number: 48 },
+        { start: new Date('2025-06-27T01:00:00Z'), number: 47 },
+        { start: new Date('2025-06-27T01:00:00Z'), number: 48 },
     ];
 
 
@@ -107,19 +107,34 @@
         return periods[periods.length - 1].number;
     }
 
-    function setActiveTabByDate(activeNumber) {
-        document.querySelectorAll('[class*="period-"]').forEach(el => {
-            el.classList.remove('active');
-        });
-
-        const activeElement = document.querySelector(`.period-${activeNumber}`);
-
-        if (activeElement) {
-            activeElement.classList.add('active');
+    document.addEventListener("click", e =>{
+        if(e.target.closest(".table__tabs-item")){
+            if(Number(e.target.closest(".table__tabs-item").getAttribute("data-week")) > activeWeek) {
+                return
+            }
+            e.target.closest(".table__tabs-item").style.pointerEvents = "initial";
+            tableTabs.forEach(tab =>{
+                tab.classList.remove("active");
+            })
+            let tabWeek = e.target.closest(".table__tabs-item").getAttribute("data-week");
+            e.target.closest(".table__tabs-item").classList.add("active");
+            renderUsers(tabWeek)
         }
-    }
+    })
 
-    setActiveTabByDate(currentActivePeriod);
+    // function setActiveTabByDate(activeNumber) {
+    //     document.querySelectorAll('[class*="period-"]').forEach(el => {
+    //         el.classList.remove('active');
+    //     });
+    //
+    //     const activeElement = document.querySelector(`.period-${activeNumber}`);
+    //
+    //     if (activeElement) {
+    //         activeElement.classList.add('active');
+    //     }
+    // }
+    //
+    // setActiveTabByDate(currentActivePeriod);
 
     // click on finished tabs
     function updateFinishedTabs() {
@@ -158,7 +173,7 @@
         let foundLive = false;
 
         for (let match of matchDates) {
-            const start = new Date(match.date);
+            const start = new Date(match.start);
             const end = new Date(start.getTime() + 2 * 60 * 60 * 1000); // +2 години
 
             if (currentDate >= start && currentDate <= end) {
@@ -278,7 +293,7 @@
 
             let currentTab = Number(document.querySelector(".table__tabs-item.active").getAttribute("data-week"))
 
-            // renderUsers();
+            // renderUsers(currentActivePeriod);
 
             console.log(currentTab);
 
@@ -408,7 +423,7 @@
     function renderUsers(week) {
         request(`/users/${week}`)
             .then(data => {
-                const users = data.users;
+                const users = data;
                 populateUsersTable(users, userId, currentTab);
             });
     }
@@ -495,16 +510,16 @@
     }
 
     function getPrizeTranslationKey(place, week) {
-        if (place <= 3) return `prize_${week}-${place}`;
-        if (place <= 10) return `prize_${week}-4-10`;
-        if (place <= 25) return `prize_${week}-11-25`;
-        if (place <= 50) return `prize_${week}-26-50`;
-        if (place <= 75) return `prize_${week}-51-75`;
-        if (place <= 100) return `prize_${week}-76-100`;
-        if (place <= 125) return `prize_${week}-101-125`;
-        if (place <= 150) return `prize_${week}-126-150`;
-        if (place <= 175) return `prize_${week}-151-175`;
-        if (place <= 200) return `prize_${week}-176-200`;
+        if (place <= 3) return `prize_1-3`;
+        if (place <= 10) return `prize-4-10`;
+        if (place <= 25) return `prize-11-25`;
+        if (place <= 50) return `prize-26-50`;
+        if (place <= 75) return `prize-51-75`;
+        if (place <= 100) return `prize-76-100`;
+        if (place <= 125) return `prize-101-125`;
+        if (place <= 150) return `prize-126-150`;
+        if (place <= 175) return `prize-151-175`;
+        if (place <= 200) return `prize}-176-200`;
     }
 
     function participate() {
