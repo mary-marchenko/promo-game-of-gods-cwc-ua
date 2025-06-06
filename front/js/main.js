@@ -4,12 +4,12 @@
 
 
     // const currentDate = new Date();
-    const currentDate = new Date();
+    const currentDate = new Date('2025-06-23T00:00:00Z');
 
 
     const customPeriods = [
-        { start: new Date('2025-06-15'), end: new Date('2025-06-22T23:59:59.999+03:00'), number: 1 },
-        { start: new Date('2025-06-23'), end: new Date('2025-07-13T23:59:59.999+03:00'), number: 2 },
+        { start: new Date('2025-06-15T00:00:00Z'), end: new Date('2025-06-22T20:59:59.999Z'), number: 1 },
+        { start: new Date('2025-06-23T00:00:00Z'), end: new Date('2025-07-13T20:59:59.999Z'), number: 2 },
     ];
 
     const matchDates = [
@@ -137,34 +137,34 @@
     // setActiveTabByDate(currentActivePeriod);
 
     // click on finished tabs
-    function updateFinishedTabs() {
-        document.querySelectorAll('[class*="period-"]').forEach(el => {
-            const match = el.className.match(/period-(\d+)/);
-            if (!match) return;
-
-            const periodNum = parseInt(match[1]);
-
-            el.classList.remove('finished', 'continues');
-            if (periodNum < activePeriodByDate) {
-                el.classList.add('finished');
-            } else if (periodNum === activePeriodByDate) {
-                el.classList.add('continues');
-            }
-
-            if (!el.dataset.listenerAdded) {
-                el.addEventListener('click', () => {
-                    if (periodNum <= activePeriodByDate) {
-                        currentActivePeriod = periodNum;
-                        setActiveTabByDate(currentActivePeriod);
-                    } else {
-                        console.log(`Перемикання на період ${periodNum} заборонене. Активний період по даті: ${activePeriodByDate}`);
-                    }
-                });
-                el.dataset.listenerAdded = 'true';
-            }
-        });
-    }
-    updateFinishedTabs();
+    // function updateFinishedTabs() {
+    //     document.querySelectorAll('[class*="period-"]').forEach(el => {
+    //         const match = el.className.match(/period-(\d+)/);
+    //         if (!match) return;
+    //
+    //         const periodNum = parseInt(match[1]);
+    //
+    //         el.classList.remove('finished', 'continues');
+    //         if (periodNum < activePeriodByDate) {
+    //             el.classList.add('finished');
+    //         } else if (periodNum === activePeriodByDate) {
+    //             el.classList.add('continues');
+    //         }
+    //
+    //         if (!el.dataset.listenerAdded) {
+    //             el.addEventListener('click', () => {
+    //                 if (periodNum <= activePeriodByDate) {
+    //                     currentActivePeriod = periodNum;
+    //
+    //                 } else {
+    //                     console.log(`Перемикання на період ${periodNum} заборонене. Активний період по даті: ${activePeriodByDate}`);
+    //                 }
+    //             });
+    //             el.dataset.listenerAdded = 'true';
+    //         }
+    //     });
+    // }
+    // updateFinishedTabs();
 
     function checkIsLiveMatch(currentDate) {
         if (!existingUser) {
@@ -293,7 +293,7 @@
 
             let currentTab = Number(document.querySelector(".table__tabs-item.active").getAttribute("data-week"))
 
-            // renderUsers(currentActivePeriod);
+            renderUsers(currentActivePeriod);
 
             console.log(currentTab);
 
@@ -424,7 +424,7 @@
         request(`/users/${week}`)
             .then(data => {
                 const users = data;
-                populateUsersTable(users, userId, currentTab);
+                populateUsersTable(users, userId, week);
             });
     }
 
@@ -618,8 +618,6 @@
         currentActivePeriod = 2;
         activePeriodByDate = 2;
 
-        setActiveTabByDate(currentActivePeriod);
-        updateFinishedTabs();
         console.log("2 period активний");
     });
 
