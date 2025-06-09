@@ -4,7 +4,7 @@
 
 
     // const currentDate = new Date();
-    const currentDate = new Date('2025-06-23T00:00:00Z');
+    const currentDate = new Date();
 
 
     const customPeriods = [
