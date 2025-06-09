@@ -723,12 +723,13 @@ body
           background-size: 100% 100%
           .table__tabs-item-stage
             text-decoration: none
-        //&:hover
-        //  cursor: pointer
-        //  background: url('../img/table/bg-tabs-active.png') no-repeat 50% 50%/cover
-        //  background-size: 100% 100%
-          .table__tabs-item-stage
-            text-decoration: none
+        &.show-period
+          &:hover
+            cursor: pointer
+            background: url('../img/table/bg-tabs-active.png') no-repeat 50% 50%/cover
+            background-size: 100% 100%
+            .table__tabs-item-stage
+              text-decoration: none
     &__head
       width: 100%
       display: flex
